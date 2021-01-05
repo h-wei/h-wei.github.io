@@ -3,15 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://h-wei.github.io/categories/</loc>
+    <loc>http://blog.ahsort.com/pages/edit-distance/</loc>
+    <lastmod>2021-01-04T07:47:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h-wei.github.io/</loc>
+    <loc>http://blog.ahsort.com/</loc>
+    <lastmod>2021-01-04T07:47:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://h-wei.github.io/tags/</loc>
+    <loc>http://blog.ahsort.com/pages/</loc>
+    <lastmod>2021-01-04T07:47:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/longest-increasing-subsequence/</loc>
+    <lastmod>2021-01-04T07:36:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/longest-common-subsequence/</loc>
+    <lastmod>2021-01-04T07:36:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/january-challenge-3/</loc>
+    <lastmod>2021-01-03T18:05:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/weekly-contest-222/</loc>
+    <lastmod>2021-01-03T13:12:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/trie/</loc>
+    <lastmod>2021-01-03T09:34:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/2020-01-02/</loc>
+    <lastmod>2021-01-02T20:13:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/pages/my-first-post/</loc>
+    <lastmod>2021-01-01T20:11:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://blog.ahsort.com/tags/</loc>
   </url>
   
 </urlset>
