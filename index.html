@@ -36,7 +36,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blog.ahsort.com/" />
-<meta property="og:updated_time" content="2021-01-04T07:47:06+08:00" />
+<meta property="og:updated_time" content="2021-01-07T09:08:39+08:00" />
 <meta itemprop="name" content="AH~ Sort">
 <meta itemprop="description" content="">
 <meta name="twitter:card" content="summary"/>
@@ -131,6 +131,56 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://blog.ahsort.com/pages/remove-list/" class="color-inherit dim link">
+            Remove List
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
+ def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+        </div>
+          <a href="http://blog.ahsort.com/pages/remove-list/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://blog.ahsort.com/pages/missing-number/" class="color-inherit dim link">
+            Missing Number
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
+ Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &lt; len(nums): j = nums[i] if j &lt; len(nums) and nums[j] !
+        </div>
+          <a href="http://blog.ahsort.com/pages/missing-number/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://blog.ahsort.com/pages/edit-distance/" class="color-inherit dim link">
             Edit Distance
             </a>
@@ -148,62 +198,24 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://blog.ahsort.com/pages/longest-increasing-subsequence/" class="color-inherit dim link">
-            Longest Increasing Subsequence
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
-A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
- def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp) def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans 
-        </div>
-          <a href="http://blog.ahsort.com/pages/longest-increasing-subsequence/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://blog.ahsort.com/pages/longest-common-subsequence/" class="color-inherit dim link">
-            Longest Common Subsequence
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Longest Common Subsequence (lc1143)  Given two strings text1 and text2, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, &ldquo;ace&rdquo; is a subsequence of &ldquo;abcde&rdquo; while &ldquo;aec&rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings.
-        </div>
-          <a href="http://blog.ahsort.com/pages/longest-common-subsequence/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://blog.ahsort.com/pages/longest-increasing-subsequence/" class="link black dim">
+              Longest Increasing Subsequence
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://blog.ahsort.com/pages/longest-common-subsequence/" class="link black dim">
+              Longest Common Subsequence
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://blog.ahsort.com/pages/january-challenge-3/" class="link black dim">
@@ -214,18 +226,6 @@ A subsequence is a sequence that can be derived from an array by deleting some o
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://blog.ahsort.com/pages/weekly-contest-222/" class="link black dim">
               Weekly Contest 222
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/trie/" class="link black dim">
-              Trie
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/2020-01-02/" class="link black dim">
-              2020 01 02
             </a>
           </h2>
         

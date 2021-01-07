@@ -6,7 +6,27 @@
     <description>Recent content on AH~ Sort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jan 2021 07:47:06 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 09:08:39 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove List</title>
+      <link>http://blog.ahsort.com/pages/remove-list/</link>
+      <pubDate>Thu, 07 Jan 2021 09:08:39 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/pages/remove-list/</guid>
+      <description>List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
+ def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.</description>
+    </item>
+    
+    <item>
+      <title>Missing Number</title>
+      <link>http://blog.ahsort.com/pages/missing-number/</link>
+      <pubDate>Thu, 07 Jan 2021 08:36:50 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/pages/missing-number/</guid>
+      <description>Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
+ Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &amp;lt; len(nums): j = nums[i] if j &amp;lt; len(nums) and nums[j] !</description>
+    </item>
+    
     <item>
       <title>Edit Distance</title>
       <link>http://blog.ahsort.com/pages/edit-distance/</link>
