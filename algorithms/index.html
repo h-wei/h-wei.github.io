@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>AH~ sort</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.82.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+      <link href="/algorithms/index.xml" rel="alternate" type="application/rss+xml" title="AH~ sort" />
+      <link href="/algorithms/index.xml" rel="feed" type="application/rss+xml" title="AH~ sort" />
+      
+    
+    
+    <meta property="og:title" content="Algorithms" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://blog.ahsort.com/algorithms/" />
+
+<meta itemprop="name" content="Algorithms">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Algorithms"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('http://blog.ahsort.com/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        AH~ sort
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Algorithms
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/array/top-easy/" class="link black dim">
+        Top Easy
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Remove Duplates from Sorted Array  Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ def solve(nums): offset = 0 for x in nums: if x != nums[offset]: offset += 1 nums[offset] = x return offset + 1 if nums else 0 Best Time to Buy and Sell Stock II  You are given an array prices where prices[i] is the price of a given stock on the ith day.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/" class="link black dim">
+        Reach Target
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Maximum (Minimum) Path to Reach a Target Statement:
+ Given a target find maximum (minimum) cost/path/sum to reach a target. Approach: Choose minimum (maximum) path among all possible paths before the current state, then add the current value. routes[i] = max(routes[j] for j in range(k, i-1)) + values[i]
+ Min Cost Climbing Stairs LC746  Given a staircase, the i-th step has some non-negative cost cost[i]. You can either climb one or two steps, find minimum cost to reach the top of the staircase.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/depth-first-search/island/" class="link black dim">
+        Island
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Number of Islands  Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands. Assume all four edges of the grid are surrounded by water.
+ def solve(grid): result = 0 m, n = len(grid), len(grid[0]) for i in range(m): for j in range(n): if grid[i][j] == &#39;1&#39;: result += 1 queue = deque([(i, j)]) grid[i][j] = &#39;&#39; while queue: x, y = queue.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/linked-list/remove-elements/" class="link black dim">
+        Remove Elements
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
+ def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/binary-tree/binary-tree/" class="link black dim">
+        Binary Tree
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def bfs(root): result = [] queue = deque([root]) while queue: n = queue.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/" class="link black dim">
+        Breadth First Search
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Word Ladder (LC127)  Given two words begin and end, and a dictionary words, return *the length of the shortest transformation sequence from begin to end, such that:
+ Only one letter can be changed at a time. Each transformed word must exist in the word list.    Return 0 if there is no such transformation sequenece
+ def solve(begin, end, words): if end not in words: return 0 d = defaultdict(set) n = len(begin) for word in words: for i in range(n): d[word[0:i] + &#39;?
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/linked-list/linked-list/" class="link black dim">
+        Linked List
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/array/missing-number/" class="link black dim">
+        Missing Number
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
+ Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &lt; len(nums): j = nums[i] if j &lt; len(nums) and nums[j] !
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/" class="link black dim">
+        Edit Distance
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
+ def solve(s, t): m, n = len(s), len(t) if abs(m - n) &gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &lt; 2 i = j = k = 0 while k &lt; min(m, n): if s[i] !
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/" class="link black dim">
+        Longest Increasing Subsequence
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
+A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
+ def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp) def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans 
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/algorithms/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/algorithms/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/algorithms/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a href="/algorithms/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/algorithms/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+</article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://blog.ahsort.com/" >
+    &copy;  AH~ sort 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

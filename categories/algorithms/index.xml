@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on AH~ sort</title>
+    <link>http://blog.ahsort.com/categories/algorithms/</link>
+    <description>Recent content in Algorithms on AH~ sort</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Apr 2021 23:13:53 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/categories/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top Easy</title>
+      <link>http://blog.ahsort.com/algorithms/array/top-easy/</link>
+      <pubDate>Sat, 17 Apr 2021 23:13:53 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/array/top-easy/</guid>
+      <description>Remove Duplates from Sorted Array  Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ def solve(nums): offset = 0 for x in nums: if x != nums[offset]: offset += 1 nums[offset] = x return offset + 1 if nums else 0 Best Time to Buy and Sell Stock II  You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
+    </item>
+    
+    <item>
+      <title>Reach Target</title>
+      <link>http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</link>
+      <pubDate>Tue, 19 Jan 2021 09:53:02 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</guid>
+      <description>Maximum (Minimum) Path to Reach a Target Statement:
+ Given a target find maximum (minimum) cost/path/sum to reach a target. Approach: Choose minimum (maximum) path among all possible paths before the current state, then add the current value. routes[i] = max(routes[j] for j in range(k, i-1)) + values[i]
+ Min Cost Climbing Stairs LC746  Given a staircase, the i-th step has some non-negative cost cost[i]. You can either climb one or two steps, find minimum cost to reach the top of the staircase.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>AH~ Sort</title>
+    <title>AH~ sort</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.79.1" />
+    <meta name="generator" content="Hugo 0.82.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -27,20 +27,19 @@
 
     
     
-      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="AH~ Sort" />
-      <link href="/index.xml" rel="feed" type="application/rss+xml" title="AH~ Sort" />
+      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="AH~ sort" />
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="AH~ sort" />
       
     
     
-    <meta property="og:title" content="AH~ Sort" />
+    <meta property="og:title" content="AH~ sort" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://blog.ahsort.com/" />
-<meta property="og:updated_time" content="2021-01-07T09:08:39+08:00" />
-<meta itemprop="name" content="AH~ Sort">
-<meta itemprop="description" content="">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="AH~ Sort"/>
+
+<meta itemprop="name" content="AH~ sort">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AH~ sort"/>
 <meta name="twitter:description" content=""/>
 
 	
@@ -58,7 +57,7 @@
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        AH~ Sort
+        AH~ sort
       
     </a>
     <div class="flex-l items-center">
@@ -87,7 +86,7 @@
 
       <div class="tc-l pv4 pv6-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          AH~ Sort
+          AH~ sort
         </h1>
         
       </div>
@@ -114,7 +113,7 @@
       
        
           <h1 class="flex-none">
-            Recent Pages
+            Recent Algorithms
           </h1>
         
 
@@ -131,15 +130,16 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://blog.ahsort.com/pages/remove-list/" class="color-inherit dim link">
-            Remove List
+          <a href="http://blog.ahsort.com/algorithms/array/top-easy/" class="color-inherit dim link">
+            Top Easy
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
- def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+          Remove Duplates from Sorted Array  Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ def solve(nums): offset = 0 for x in nums: if x != nums[offset]: offset += 1 nums[offset] = x return offset + 1 if nums else 0 Best Time to Buy and Sell Stock II  You are given an array prices where prices[i] is the price of a given stock on the ith day.
         </div>
-          <a href="http://blog.ahsort.com/pages/remove-list/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://blog.ahsort.com/algorithms/array/top-easy/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -156,15 +156,16 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://blog.ahsort.com/pages/missing-number/" class="color-inherit dim link">
-            Missing Number
+          <a href="http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/" class="color-inherit dim link">
+            Reach Target
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
- Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &lt; len(nums): j = nums[i] if j &lt; len(nums) and nums[j] !
+          Maximum (Minimum) Path to Reach a Target Statement:
+ Given a target find maximum (minimum) cost/path/sum to reach a target. Approach: Choose minimum (maximum) path among all possible paths before the current state, then add the current value. routes[i] = max(routes[j] for j in range(k, i-1)) + values[i]
+ Min Cost Climbing Stairs LC746  Given a staircase, the i-th step has some non-negative cost cost[i]. You can either climb one or two steps, find minimum cost to reach the top of the staircase.
         </div>
-          <a href="http://blog.ahsort.com/pages/missing-number/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -181,15 +182,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://blog.ahsort.com/pages/edit-distance/" class="color-inherit dim link">
-            Edit Distance
+          <a href="http://blog.ahsort.com/algorithms/depth-first-search/island/" class="color-inherit dim link">
+            Island
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
- def solve(s, t): m, n = len(s), len(t) if abs(m - n) &gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &lt; 2 i = j = k = 0 while k &lt; min(m, n): if s[i] !
+          Number of Islands  Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands. Assume all four edges of the grid are surrounded by water.
+ def solve(grid): result = 0 m, n = len(grid), len(grid[0]) for i in range(m): for j in range(n): if grid[i][j] == &#39;1&#39;: result += 1 queue = deque([(i, j)]) grid[i][j] = &#39;&#39; while queue: x, y = queue.
         </div>
-          <a href="http://blog.ahsort.com/pages/edit-distance/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://blog.ahsort.com/algorithms/depth-first-search/island/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -206,33 +207,33 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/longest-increasing-subsequence/" class="link black dim">
-              Longest Increasing Subsequence
+            <a href="http://blog.ahsort.com/algorithms/linked-list/remove-elements/" class="link black dim">
+              Remove Elements
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/longest-common-subsequence/" class="link black dim">
-              Longest Common Subsequence
+            <a href="http://blog.ahsort.com/algorithms/binary-tree/binary-tree/" class="link black dim">
+              Binary Tree
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/january-challenge-3/" class="link black dim">
-              January Challenge 3
+            <a href="http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/" class="link black dim">
+              Breadth First Search
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://blog.ahsort.com/pages/weekly-contest-222/" class="link black dim">
-              Weekly Contest 222
+            <a href="http://blog.ahsort.com/algorithms/linked-list/linked-list/" class="link black dim">
+              Linked List
             </a>
           </h2>
         
 
         
         
-          <a href="http://blog.ahsort.com/pages/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Pages</a>
+          <a href="http://blog.ahsort.com/algorithms/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Algorithms</a>
         
         </section>
       
@@ -244,7 +245,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://blog.ahsort.com/" >
-    &copy;  AH~ Sort 2021 
+    &copy;  AH~ sort 2021 
   </a>
     <div>
 

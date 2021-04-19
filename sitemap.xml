@@ -1,73 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://blog.ahsort.com/</loc>
-    <lastmod>2021-01-07T09:08:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/</loc>
-    <lastmod>2021-01-07T09:08:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/remove-list/</loc>
-    <lastmod>2021-01-07T09:08:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/missing-number/</loc>
-    <lastmod>2021-01-07T08:36:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/edit-distance/</loc>
-    <lastmod>2021-01-04T07:47:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/longest-increasing-subsequence/</loc>
-    <lastmod>2021-01-04T07:36:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/longest-common-subsequence/</loc>
-    <lastmod>2021-01-04T07:36:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/january-challenge-3/</loc>
-    <lastmod>2021-01-03T18:05:23+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/weekly-contest-222/</loc>
-    <lastmod>2021-01-03T13:12:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/trie/</loc>
-    <lastmod>2021-01-03T09:34:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/2020-01-02/</loc>
-    <lastmod>2021-01-02T20:13:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ahsort.com/pages/my-first-post/</loc>
-    <lastmod>2021-01-01T20:11:39+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-04-17T23:13:53+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/categories/algorithms/</loc>
+    <lastmod>2021-04-17T23:13:53+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/</loc>
+    <lastmod>2021-04-17T23:13:53+08:00</lastmod>
+  </url><url>
     <loc>http://blog.ahsort.com/categories/</loc>
-  </url>
-  
-  <url>
+    <lastmod>2021-04-17T23:13:53+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/array/top-easy/</loc>
+    <lastmod>2021-04-17T23:13:53+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</loc>
+    <lastmod>2021-01-19T09:53:02+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/depth-first-search/island/</loc>
+    <lastmod>2021-01-18T17:02:35+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/linked-list/remove-elements/</loc>
+    <lastmod>2021-01-18T12:20:52+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/binary-tree/binary-tree/</loc>
+    <lastmod>2021-01-18T12:17:13+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/</loc>
+    <lastmod>2021-01-09T20:56:31+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/linked-list/linked-list/</loc>
+    <lastmod>2021-01-07T09:08:39+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/array/missing-number/</loc>
+    <lastmod>2021-01-07T08:36:50+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</loc>
+    <lastmod>2021-01-04T07:47:06+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</loc>
+    <lastmod>2021-01-04T07:36:57+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</loc>
+    <lastmod>2021-01-04T07:36:43+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/posts/january-challenge-3/</loc>
+    <lastmod>2021-01-03T18:05:23+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/posts/</loc>
+    <lastmod>2021-01-03T18:05:23+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/posts/weekly-contest-222/</loc>
+    <lastmod>2021-01-03T13:12:10+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/trie/trie/</loc>
+    <lastmod>2021-01-03T09:34:58+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/posts/2020-01-02/</loc>
+    <lastmod>2021-01-02T20:13:18+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/posts/chain-of-blocks/</loc>
+    <lastmod>2021-01-01T20:11:39+08:00</lastmod>
+  </url><url>
     <loc>http://blog.ahsort.com/tags/</loc>
   </url>
-  
 </urlset>
