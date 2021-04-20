@@ -6,7 +6,17 @@
     <description>Recent content in Algorithms on AH~ sort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Apr 2021 23:13:53 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 08:57:52 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 January Week 2</title>
+      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-2/</link>
+      <pubDate>Tue, 20 Apr 2021 08:57:52 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-2/</guid>
+      <description>Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
+ Intution Solution def solve(s: List[str], t: List[str]) -&amp;gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &amp;#39;&amp;#39;.join(s) == &amp;#39;&amp;#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&amp;gt; s1 -&amp;gt; s2 -&amp;gt; .</description>
+    </item>
+    
     <item>
       <title>Top Easy</title>
       <link>http://blog.ahsort.com/algorithms/array/top-easy/</link>
@@ -116,6 +126,26 @@ A subsequence is a sequence that can be derived from an array by deleting some o
       
       <guid>http://blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</guid>
       <description>Longest Common Subsequence (lc1143)  Given two strings s and t, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, &amp;ldquo;ace&amp;rdquo; is a subsequence of &amp;ldquo;abcde&amp;rdquo; while &amp;ldquo;aec&amp;rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings.</description>
+    </item>
+    
+    <item>
+      <title>2021 January Week 1</title>
+      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-1/</link>
+      <pubDate>Sun, 03 Jan 2021 18:05:23 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-1/</guid>
+      <description>Check Array Formation Through Concatenation (LC1640)  Given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].
+Return true *if it is possible to form the array arr from pieces. Otherwise, return false.</description>
+    </item>
+    
+    <item>
+      <title>Weekly Contest 222</title>
+      <link>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</link>
+      <pubDate>Sun, 03 Jan 2021 13:12:10 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</guid>
+      <description>1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
+ def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.</description>
     </item>
     
     <item>

@@ -6,27 +6,7 @@
     <description>Recent content in Posts on AH~ sort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jan 2021 18:05:23 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>January Challenge 3</title>
-      <link>http://blog.ahsort.com/posts/january-challenge-3/</link>
-      <pubDate>Sun, 03 Jan 2021 18:05:23 +0800</pubDate>
-      
-      <guid>http://blog.ahsort.com/posts/january-challenge-3/</guid>
-      <description>Check Array Formation Through Concatenation (LC1640)  Given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].
-Return true *if it is possible to form the array arr from pieces. Otherwise, return false.</description>
-    </item>
-    
-    <item>
-      <title>Weekly Contest 222</title>
-      <link>http://blog.ahsort.com/posts/weekly-contest-222/</link>
-      <pubDate>Sun, 03 Jan 2021 13:12:10 +0800</pubDate>
-      
-      <guid>http://blog.ahsort.com/posts/weekly-contest-222/</guid>
-      <description>1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
- def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 02 Jan 2021 20:13:18 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2020 01 02</title>
       <link>http://blog.ahsort.com/posts/2020-01-02/</link>

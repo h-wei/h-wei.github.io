@@ -104,6 +104,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/challege/2021-january-week-2/" class="link black dim">
+        2021 January Week 2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
+ Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; .
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
       <a href="http://blog.ahsort.com/algorithms/array/top-easy/" class="link black dim">
         Top Easy
       </a>
@@ -240,23 +256,6 @@ Do not allocate extra space for another array, you must do this by modifying the
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
  def solve(s, t): m, n = len(s), len(t) if abs(m - n) &gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &lt; 2 i = j = k = 0 while k &lt; min(m, n): if s[i] !
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Algorithms</span>
-    <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/" class="link black dim">
-        Longest Increasing Subsequence
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
-A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
- def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp) def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans 
     </div>
   </div>
 </div>
