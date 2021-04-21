@@ -104,6 +104,38 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/array/missing-number/" class="link black dim">
+        Missing Number
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
+ Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &lt; len(nums): j = nums[i] if j &lt; len(nums) and nums[j] !
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/" class="link black dim">
+        Edit Distance
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
+ def solve(s, t): m, n = len(s), len(t) if abs(m - n) &gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &lt; 2 i = j = k = 0 while k &lt; min(m, n): if s[i] !
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
       <a href="http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/" class="link black dim">
         Longest Increasing Subsequence
       </a>
@@ -152,7 +184,7 @@ Return true *if it is possible to form the array arr from pieces. Otherwise, ret
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/challege/weekly-contest-222/" class="link black dim">
+      <a href="http://blog.ahsort.com/algorithms/contest/weekly-contest-222/" class="link black dim">
         Weekly Contest 222
       </a>
     </h1>
