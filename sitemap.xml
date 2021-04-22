@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</loc>
-    <lastmod>2021-04-21T09:32:15+08:00</lastmod>
+    <loc>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</loc>
+    <lastmod>2021-04-22T16:16:03+08:00</lastmod>
   </url><url>
     <loc>http://blog.ahsort.com/</loc>
-    <lastmod>2021-04-21T09:32:15+08:00</lastmod>
+    <lastmod>2021-04-22T16:16:03+08:00</lastmod>
   </url><url>
     <loc>http://blog.ahsort.com/categories/algorithms/</loc>
-    <lastmod>2021-04-21T09:32:15+08:00</lastmod>
+    <lastmod>2021-04-22T16:16:03+08:00</lastmod>
   </url><url>
     <loc>http://blog.ahsort.com/algorithms/</loc>
-    <lastmod>2021-04-21T09:32:15+08:00</lastmod>
+    <lastmod>2021-04-22T16:16:03+08:00</lastmod>
   </url><url>
     <loc>http://blog.ahsort.com/categories/</loc>
+    <lastmod>2021-04-22T16:16:03+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</loc>
     <lastmod>2021-04-21T09:32:15+08:00</lastmod>
   </url><url>
     <loc>http://blog.ahsort.com/algorithms/contest/weekly-contest-223/</loc>

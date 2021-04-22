@@ -6,7 +6,17 @@
     <description>Recent content in Algorithms on AH~ sort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 09:32:15 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 16:16:03 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 January Week 4</title>
+      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</link>
+      <pubDate>Thu, 22 Apr 2021 16:16:03 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</guid>
+      <description>Determin if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
+ Operation 1: Swap any two existing characters. eg. abcde -&amp;gt; aecdb, (b &amp;lt;-&amp;gt; e) Operation 2: Transform **every occurence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&amp;gt; bbcbaa (a &amp;lt;-&amp;gt; b). You can use the operations on either string as many times as necessary.</description>
+    </item>
+    
     <item>
       <title>2021 January Week 3</title>
       <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</link>
