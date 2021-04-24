@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
  Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ."><meta itemprop="datePublished" content="2021-04-20T08:57:52&#43;08:00" />
 <meta itemprop="dateModified" content="2021-04-20T08:57:52&#43;08:00" />
-<meta itemprop="wordCount" content="985">
+<meta itemprop="wordCount" content="980">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021 January Week 2"/>
 <meta name="twitter:description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
@@ -163,7 +163,7 @@ Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictiona
 <h3 id="intution-1">Intution</h3>
 <h3 id="solution-1">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(words: List[str], begin: str, end: str) <span style="color:#f92672">-&gt;</span> int:
-    <span style="color:#66d9ef">if</span> end <span style="color:#f92672">not</span> words:
+    <span style="color:#66d9ef">if</span> end <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> words:
         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
     aux <span style="color:#f92672">=</span> defaultdict(set)
@@ -172,8 +172,7 @@ Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictiona
             key <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>:i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">+</span> w[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
             aux[key]<span style="color:#f92672">.</span>add(w)
 
-    <span style="color:#75715e"># bfs</span>
-    cand <span style="color:#f92672">=</span> deque([(begin, <span style="color:#ae81ff">0</span>)])
+    cand <span style="color:#f92672">=</span> deque([(begin, <span style="color:#ae81ff">1</span>)])
     seen <span style="color:#f92672">=</span> {begin}
     <span style="color:#66d9ef">while</span> cand:
         word, depth <span style="color:#f92672">=</span> cand<span style="color:#f92672">.</span>popleft()
@@ -247,7 +246,7 @@ Return the <strong>total cost</strong> to insert all elements from <code>instruc
 <h3 id="solution-3">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums1: List[int], m: int, nums2: List[int], n: int) <span style="color:#f92672">-&gt;</span> None:
     end <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> n
-    <span style="color:#66d9ef">while</span> m <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+    <span style="color:#66d9ef">while</span> m <span style="color:#f92672">and</span> n:
         <span style="color:#66d9ef">if</span> nums1[m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;</span>  nums1[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
             nums1[end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> nums1[m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
             end, m <span style="color:#f92672">=</span> end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
@@ -273,8 +272,8 @@ Return the <strong>total cost</strong> to insert all elements from <code>instruc
         <span style="color:#66d9ef">if</span> t:
             carry <span style="color:#f92672">+=</span> t<span style="color:#f92672">.</span>val
             t <span style="color:#f92672">=</span> t<span style="color:#f92672">.</span>next
-        carry, val <span style="color:#f92672">=</span> divmod(carry, <span style="color:#ae81ff">10</span>)
-        c<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode(val)
+        carry, digit <span style="color:#f92672">=</span> divmod(carry, <span style="color:#ae81ff">10</span>)
+        c<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode(val<span style="color:#f92672">=</span>digit)
         c <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span>next
     <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
 </code></pre></div><h2 id="boats-to-save-people">Boats to Save People</h2>
@@ -309,14 +308,15 @@ Then, thinking in reverse, that, instead of finding the minimum <code>prefix + s
 Final, finding the maximum subarray is standard and can be done greedily.</p>
 <h3 id="solution-6">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int], x: int) <span style="color:#f92672">-&gt;</span> int:
-    result <span style="color:#f92672">=</span> total <span style="color:#f92672">=</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
     target <span style="color:#f92672">=</span> sum(nums) <span style="color:#f92672">-</span> x
-    n <span style="color:#f92672">=</span> len(nums)
     <span style="color:#66d9ef">if</span> target <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
         <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+    n <span style="color:#f92672">=</span> len(nums)
     <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
         <span style="color:#66d9ef">return</span> n
 
+    result <span style="color:#f92672">=</span> total <span style="color:#f92672">=</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums)):
         total <span style="color:#f92672">+=</span> nums[i]
         <span style="color:#66d9ef">while</span> total <span style="color:#f92672">&gt;</span> target:
