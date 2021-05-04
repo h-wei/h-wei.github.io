@@ -7,7 +7,8 @@
     <title>2021 January Week 3 | AH~ sort</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Get Maximum in Generated Array  Given an integer n. An Array nums of length n&#43;1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2*i &#43; 1] = nums[i] &#43; nums[i&#43;1], when 2 &lt;= 2*i &#43; 1 &lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.">
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i &#43; 1] = nums[i] &#43; nums[i&#43;1], when `2 &lt;= 2i &#43; 1 &lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.">
     <meta name="generator" content="Hugo 0.82.0" />
     
     
@@ -30,7 +31,8 @@
     
     <meta property="og:title" content="2021 January Week 3" />
 <meta property="og:description" content="Get Maximum in Generated Array  Given an integer n. An Array nums of length n&#43;1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2*i &#43; 1] = nums[i] &#43; nums[i&#43;1], when 2 &lt;= 2*i &#43; 1 &lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array." />
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i &#43; 1] = nums[i] &#43; nums[i&#43;1], when `2 &lt;= 2i &#43; 1 &lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blog.ahsort.com/algorithms/challege/2021-january-week-3/" /><meta property="article:section" content="algorithms" />
 <meta property="article:published_time" content="2021-04-21T09:32:15&#43;08:00" />
@@ -38,13 +40,15 @@
 
 <meta itemprop="name" content="2021 January Week 3">
 <meta itemprop="description" content="Get Maximum in Generated Array  Given an integer n. An Array nums of length n&#43;1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2*i &#43; 1] = nums[i] &#43; nums[i&#43;1], when 2 &lt;= 2*i &#43; 1 &lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array."><meta itemprop="datePublished" content="2021-04-21T09:32:15&#43;08:00" />
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i &#43; 1] = nums[i] &#43; nums[i&#43;1], when `2 &lt;= 2i &#43; 1 &lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array."><meta itemprop="datePublished" content="2021-04-21T09:32:15&#43;08:00" />
 <meta itemprop="dateModified" content="2021-04-21T09:32:15&#43;08:00" />
 <meta itemprop="wordCount" content="681">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021 January Week 3"/>
 <meta name="twitter:description" content="Get Maximum in Generated Array  Given an integer n. An Array nums of length n&#43;1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2*i &#43; 1] = nums[i] &#43; nums[i&#43;1], when 2 &lt;= 2*i &#43; 1 &lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array."/>
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i &#43; 1] = nums[i] &#43; nums[i&#43;1], when `2 &lt;= 2i &#43; 1 &lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array."/>
 
 	
   </head>
@@ -147,8 +151,9 @@
 <li>nums[0] = 0</li>
 <li>nums[1] = 1</li>
 <li>nums[2<em>i] = nums[i], when `2 &lt;= 2</em>i &lt;= n</li>
-<li>nums[2*i + 1] = nums[i] + nums[i+1], when <code>2 &lt;= 2*i + 1 &lt;= n Return the maximum integer in the array </code>nums`.</li>
+<li>nums[2<em>i + 1] = nums[i] + nums[i+1], when `2 &lt;= 2</em>i + 1 &lt;= n</li>
 </ul>
+<p>Return the maximum integer in the array <code>nums</code>.</p>
 </blockquote>
 <h3 id="solution">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(n):
@@ -191,8 +196,8 @@
             start <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
 </code></pre></div><h2 id="count-sorted-vowel-strings">Count Sorted Vowel Strings</h2>
 <blockquote>
-<p>Given an integer <code>n</code>, return the number of strings of length <code>n</code> that consist only of vowels (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>) and are <strong>lexicographically sorted</strong>.
-A string <code>s</code> is <strong>lexicographically sorted</strong> if for all valid <code>i</code>, <code>s[i]</code> is the same as or comes before <code>s[i+1]</code> in the alphabet.</p>
+<p>Given an integer <code>n</code>, return the number of strings of length <code>n</code> that consist only of vowels (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>) and are <strong>lexicographically sorted</strong>.</p>
+<p>A string <code>s</code> is <strong>lexicographically sorted</strong> if for all valid <code>i</code>, <code>s[i]</code> is the same as or comes before <code>s[i+1]</code> in the alphabet.</p>
 </blockquote>
 <h3 id="solution-2">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(n: int) <span style="color:#f92672">-&gt;</span> int:
@@ -202,9 +207,9 @@ A string <code>s</code> is <strong>lexicographically sorted</strong> if for all 
     <span style="color:#66d9ef">return</span> a
 </code></pre></div><h2 id="max-number-of-k-sum-pairs">Max Number of K-Sum Pairs</h2>
 <blockquote>
-<p>Given an integer array <code>nums</code> and an integer <code>k</code>.
-In one operation, you can pick two numbers from the array whose sum equals <code>k</code> and remove them from array.
-Return the maximum number of operations you can perform on the array.</p>
+<p>Given an integer array <code>nums</code> and an integer <code>k</code>.</p>
+<p>In one operation, you can pick two numbers from the array whose sum equals <code>k</code> and remove them from array.</p>
+<p>Return the maximum number of operations you can perform on the array.</p>
 </blockquote>
 <h3 id="solution-3">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
@@ -229,7 +234,7 @@ Return the maximum number of operations you can perform on the array.</p>
 
     result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
-        result <span style="color:#f92672">=</span> max(result, palidromic(i, i), palindromic(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), key<span style="color:#f92672">=</span>len)
+        result <span style="color:#f92672">=</span> max(result, palindromic(i, i), palindromic(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), key<span style="color:#f92672">=</span>len)
     <span style="color:#66d9ef">return</span> result
 </code></pre></div><h2 id="valid-parentheses">Valid Parentheses</h2>
 <blockquote>
@@ -253,9 +258,9 @@ Return the maximum number of operations you can perform on the array.</p>
     <span style="color:#66d9ef">return</span> <span style="color:#f92672">not</span> stack
 </code></pre></div><h2 id="find-the-most-competitive-subsequence">Find the Most Competitive Subsequence</h2>
 <blockquote>
-<p>Given an integer array <code>nums</code> and a positive integer <code>k</code>, return the most <strong>competitive</strong> subsequence of <code>nums</code> of size <code>k</code>.
-An array&rsquo;s subsequence is a resulting sequence obtained by erasing some (possibly zero) elements from the array.
-We define that a subsequence <code>a</code> is more <strong>competitive</strong> than a subsequence <code>b</code> (of the same length) if in the first position where <code>a</code> and <code>b</code> differ, subsequence <code>a</code> has a number <strong>less</strong> than the corresponding number in <code>b</code>. For example, <code>[1,3,4]</code> is more competitive than <code>[1,3,5]</code> because the first position they differ is at the final number and <code>4</code> is less than <code>5</code>.</p>
+<p>Given an integer array <code>nums</code> and a positive integer <code>k</code>, return the most <strong>competitive</strong> subsequence of <code>nums</code> of size <code>k</code>.</p>
+<p>An array&rsquo;s subsequence is a resulting sequence obtained by erasing some (possibly zero) elements from the array.</p>
+<p>We define that a subsequence <code>a</code> is more <strong>competitive</strong> than a subsequence <code>b</code> (of the same length) if in the first position where <code>a</code> and <code>b</code> differ, subsequence <code>a</code> has a number <strong>less</strong> than the corresponding number in <code>b</code>. For example, <code>[1,3,4]</code> is more competitive than <code>[1,3,5]</code> because the first position they differ is at the final number and <code>4</code> is less than <code>5</code>.</p>
 </blockquote>
 <h3 id="solution-4">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> List[int]:

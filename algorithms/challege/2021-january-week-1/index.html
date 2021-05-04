@@ -145,7 +145,7 @@ Return true *if it is possible to form the array arr from pieces. Otherwise, ret
 <p>Given an array of <strong>distinct</strong> integers <code>arr</code> and an array of integer arrays <code>pieces</code>, where the integers in <code>pieces</code> are <strong>distinct</strong>. Your goal is form <code>arr</code> by concatenating the arrays in <code>pieces</code> <strong>in any order</strong>. However, you are <strong>not</strong> allowed to reorder the integers in each array <code>pieces[i]</code>.</p>
 <p>Return <code>true</code> *if it is possible to form the array <code>arr</code> from <code>pieces</code>. Otherwise, return <code>false</code>.</p>
 </blockquote>
-<h3 id="intution">Intution</h3>
+<h3 id="intuition">Intuition</h3>
 <p>Because the <code>arr</code>&rsquo;s integers and the <code>pieces</code>' integers are distinct, we can sort the integers of the <code>pieces</code> with the index of the <code>arr</code>&rsquo;s integers.
 Then we join the sorted array and compare it.</p>
 <h3 id="solution">Solution</h3>
@@ -158,7 +158,7 @@ Then we join the sorted array and compare it.</p>
 The <code>cloned</code> tree is <strong>copy of</strong> the <code>original</code> tree.
 Return *a reference to the same node in the <code>cloned</code> tree.</p>
 </blockquote>
-<h3 id="intution-1">Intution</h3>
+<h3 id="intuition-1">Intuition</h3>
 <h3 id="solution-1">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(original: TreeNode, cloned: TreeNode, target: TreeNode) <span style="color:#f92672">-&gt;</span> TreeNode:
     <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> original:
@@ -169,14 +169,14 @@ Return *a reference to the same node in the <code>cloned</code> tree.</p>
 
 </code></pre></div><h2 id="beautiful-arrangement-lc526httpsleetcodecomproblemsbeautiful-arrangement">Beautiful Arrangement (<a href="https://leetcode.com/problems/beautiful-arrangement/">LC526</a>)</h2>
 <blockquote>
-<p>Suppose you have <code>n</code> integers from <code>1</code> to <code>n</code>. We define a beautiful arrangemnt as an array that is  constructed by these <code>n</code> numbers successfully if one of the following is true for the <code>i</code>th poisition (<code>1 &lt;= i &lt;= n</code>) in this array:</p>
+<p>Suppose you have <code>n</code> integers from <code>1</code> to <code>n</code>. We define a beautiful arrangement as an array that is  constructed by these <code>n</code> numbers successfully if one of the following is true for the <code>i</code>th position (<code>1 &lt;= i &lt;= n</code>) in this array:</p>
 <ul>
 <li>The number at the <code>i</code>th position is divisible by <code>i</code>.</li>
 <li><code>i</code> is divisible by the number at the <code>i</code>th position.</li>
 </ul>
 <p>Given an integer <code>n</code>, return <em>the number of the beautiful arrangements that you can construct</em>.</p>
 </blockquote>
-<h3 id="intution-2">Intution</h3>
+<h3 id="intuition-2">Intuition</h3>
 <h3 id="solution-2">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(n):
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(i, remainder):
@@ -206,7 +206,7 @@ Return *a reference to the same node in the <code>cloned</code> tree.</p>
 <blockquote>
 <p>Merge two sorted linked lists and return it as a <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>
 </blockquote>
-<h3 id="intution-3">Intution</h3>
+<h3 id="intuition-3">Intuition</h3>
 <h3 id="solution-3">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(a: ListNode, b: ListNode) <span style="color:#f92672">-&gt;</span> ListNode:
     c <span style="color:#f92672">=</span> dummy <span style="color:#f92672">=</span> ListNode()
@@ -223,11 +223,9 @@ Return *a reference to the same node in the <code>cloned</code> tree.</p>
 </code></pre></div><h2 id="remove-duplicates-from-sorted-list-ii">Remove Duplicates from Sorted List II</h2>
 <blockquote>
 <p>Given the <code>head</code> of a sorted linked list, <em>delete all nodes that thave duplicate numbers, leaving only distinct numbers from the original list.</em></p>
-</blockquote>
-<blockquote>
 <p>Return *the linked list <strong>sorted</strong> as well.</p>
 </blockquote>
-<h3 id="intution-4">Intution</h3>
+<h3 id="intuotion">Intuotion</h3>
 <h3 id="solution-4">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(head: ListNode) <span style="color:#f92672">-&gt;</span> ListNode:
     c <span style="color:#f92672">=</span> dummy <span style="color:#f92672">=</span> ListNode(next<span style="color:#f92672">=</span>head)
@@ -242,10 +240,10 @@ Return *a reference to the same node in the <code>cloned</code> tree.</p>
     <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
 </code></pre></div><h2 id="kth-missing-positive-number">Kth Missing Positive Number</h2>
 <blockquote>
-<p>Given an array <code>arr</code> of positive integers sorted in a <strong>strictly increasing order</strong>, and an integer <code>k</code>.
-<em>Find the <code>k</code>th positive integer that is missing from this array.</em></p>
+<p>Given an array <code>arr</code> of positive integers sorted in a <strong>strictly increasing order</strong>, and an integer <code>k</code>.</p>
+<p><em>Find the <code>k</code>th positive integer that is missing from this array.</em></p>
 </blockquote>
-<h3 id="intution-5">Intution</h3>
+<h3 id="intuition-4">Intuition</h3>
 <h3 id="solution-5">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(arr: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
     start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(arr)
@@ -260,7 +258,7 @@ Return *a reference to the same node in the <code>cloned</code> tree.</p>
 <blockquote>
 <p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
 </blockquote>
-<h3 id="intution-6">Intution</h3>
+<h3 id="intuition-5">Intuition</h3>
 <h3 id="solution-6">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(s: str) <span style="color:#f92672">-&gt;</span> int:
     seen <span style="color:#f92672">=</span> {}

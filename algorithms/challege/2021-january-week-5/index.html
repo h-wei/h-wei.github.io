@@ -6,9 +6,9 @@
     
     <title>2021 January Week 5 | AH~ sort</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].">
+    <meta name="description" content="Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].">
     <meta name="generator" content="Hugo 0.82.0" />
     
     
@@ -30,25 +30,25 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
     
     
     <meta property="og:title" content="2021 January Week 5" />
-<meta property="og:description" content="Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]." />
+<meta property="og:description" content="Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blog.ahsort.com/algorithms/challege/2021-january-week-5/" /><meta property="article:section" content="algorithms" />
 <meta property="article:published_time" content="2021-04-23T09:42:47&#43;08:00" />
 <meta property="article:modified_time" content="2021-04-23T09:42:47&#43;08:00" />
 
 <meta itemprop="name" content="2021 January Week 5">
-<meta itemprop="description" content="Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]."><meta itemprop="datePublished" content="2021-04-23T09:42:47&#43;08:00" />
+<meta itemprop="description" content="Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]."><meta itemprop="datePublished" content="2021-04-23T09:42:47&#43;08:00" />
 <meta itemprop="dateModified" content="2021-04-23T09:42:47&#43;08:00" />
 <meta itemprop="wordCount" content="354">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021 January Week 5"/>
-<meta name="twitter:description" content="Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]."/>
+<meta name="twitter:description" content="Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c]."/>
 
 	
   </head>
@@ -145,8 +145,10 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="vertical-order-traversal-of-a-binary-tree">Vertical Order Traversal of a Binary Tree</h2>
+<blockquote>
 <p>Given the <code>root</code> of a binary tree, calculate the <strong>vertical order traversal</strong> of the binary tree.</p>
-<p><strong>Note</strong>: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.</p>
+<p><strong>Note</strong>: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.</p>
+</blockquote>
 <h3 id="solution">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(root: ListNode) <span style="color:#f92672">-&gt;</span> List[List[int]]:
     level <span style="color:#f92672">=</span> [(root, <span style="color:#ae81ff">0</span>)]
@@ -162,6 +164,7 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
         ]
     <span style="color:#66d9ef">return</span> [columns[c] <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> sorted(columns<span style="color:#f92672">.</span>keys())]
 </code></pre></div><h2 id="minimize-deviation-in-array">Minimize Deviation in Array</h2>
+<blockquote>
 <p>Given an array <code>nums</code> of <code>n</code> positive integers. You can perform two types of operations on any element of the array any number of times:</p>
 <ul>
 <li>If the element is <strong>even</strong>, <strong>divide</strong> it by <code>2</code>.</li>
@@ -169,6 +172,7 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
 </ul>
 <p>The <strong>deviation</strong> of the array is the <strong>maximum difference</strong> between any two elements in the array.</p>
 <p>Return the <strong>minimum deviation</strong> the array can have after performing some number of operations.</p>
+</blockquote>
 <h3 id="solution-1">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
     heap <span style="color:#f92672">=</span> []
@@ -188,9 +192,11 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
             lower <span style="color:#f92672">=</span> max(lower, x<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)
     <span style="color:#66d9ef">return</span> result
 </code></pre></div><h2 id="next-permutation">Next Permutation</h2>
+<blockquote>
 <p>Implement <strong>next permutation</strong>, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
-<p>If such an arrangement is not possible, it must rearrange it as the lowest posiible order (i.e., sorted in ascending order).</p>
+<p>If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).</p>
 <p>The replacement must be <strong>in place</strong> and use only constant extra memory.</p>
+</blockquote>
 <h3 id="solution-2">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int]) <span style="color:#f92672">-&gt;</span> None:
     i <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>

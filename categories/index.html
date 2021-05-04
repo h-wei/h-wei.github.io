@@ -115,14 +115,47 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/challege/2021-february-week-2/" class="link black dim">
+        2021 February Week 2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Peeking Iterator  Design an iterator that supports the peek operation on a list in addition to the hasNext and the next operations. Implement the PeekingIterator class:
+ PeekingIterator(int[] nums) Initializes the object with the given integer array nums`. int next() Returns the next elements in the array and moves the pointer to the next element. bool hasNext() Returns true if there are still elements in the array. int peek() Returns the next element in the array without moving the pointer.
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/challege/2021-february-week-1/" class="link black dim">
+        2021 February Week 1
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Number of 1 bits  Write a function that takes an unsigned integer and returns the number of 1 bits it has (also know as the Hamming weight).
+ Intuition Use x &amp; (x-1) remove the rightmost 1 bit.
+Solution def count_1s(n: int) -&gt; int: result = 0 while n: result += 1 n &amp;= n-1 return result Trim a Binary Search Tree  Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high].
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
       <a href="http://blog.ahsort.com/algorithms/challege/2021-january-week-5/" class="link black dim">
         2021 January Week 5
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].
+      Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].
     </div>
   </div>
 </div>
@@ -137,8 +170,8 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Determin if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
- Operation 1: Swap any two existing characters. eg. abcde -&gt; aecdb, (b &lt;-&gt; e) Operation 2: Transform **every occurence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&gt; bbcbaa (a &lt;-&gt; b). You can use the operations on either string as many times as necessary.
+      Determine if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
+ Operation 1: Swap any two existing characters. eg. abcde -&gt; aecdb, (b &lt;-&gt; e) Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&gt; bbcbaa (a &lt;-&gt; b).  You can use the operations on either string as many times as necessary.
     </div>
   </div>
 </div>
@@ -154,7 +187,8 @@ Solution def solve(root: ListNode) -&gt; List[List[int]]: level = [(root, 0)] co
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Get Maximum in Generated Array  Given an integer n. An Array nums of length n+1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2*i + 1] = nums[i] + nums[i+1], when 2 &lt;= 2*i + 1 &lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i + 1] = nums[i] + nums[i+1], when `2 &lt;= 2i + 1 &lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.
     </div>
   </div>
 </div>
@@ -204,6 +238,28 @@ Do not allocate extra space for another array, you must do this by modifying the
       Maximum (Minimum) Path to Reach a Target Statement:
  Given a target find maximum (minimum) cost/path/sum to reach a target. Approach: Choose minimum (maximum) path among all possible paths before the current state, then add the current value. routes[i] = max(routes[j] for j in range(k, i-1)) + values[i]
  Min Cost Climbing Stairs LC746  Given a staircase, the i-th step has some non-negative cost cost[i]. You can either climb one or two steps, find minimum cost to reach the top of the staircase.
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/categories/system-design" class="link blue hover-black">
+            Category: system-design
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">System</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/system/distributed-systems/01-introduction/" class="link black dim">
+        01 Introduction
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Questions  What is a distributed system? Why do people build distributed system? Why take this course?  Topic  fault tolerance consistency performance relationship  History Context Case Study: MapReduce  what pros and cons more details current status  Conclusion Lab 1 
     </div>
   </div>
 </div>

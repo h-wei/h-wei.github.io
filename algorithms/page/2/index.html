@@ -104,6 +104,37 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/linked-list/remove-elements/" class="link black dim">
+        Remove Elements
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
+ def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/binary-tree/binary-tree/" class="link black dim">
+        Binary Tree
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def preorder(root: TreeNode) -&gt; List[int]: result = [] stack = [] while stack or root: if root: result.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
       <a href="http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/" class="link black dim">
         Breadth First Search
       </a>
@@ -216,28 +247,13 @@ Return true *if it is possible to form the array arr from pieces. Otherwise, ret
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Algorithms</span>
     <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/contest/weekly-contest-222/" class="link black dim">
+      <a href="http://blog.ahsort.com/algorithms/challege/weekly-contest-222/" class="link black dim">
         Weekly Contest 222
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
  def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Algorithms</span>
-    <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/trie/trie/" class="link black dim">
-        Trie
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord(&#39;a&#39;) if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord(&#39;a&#39;) node = node.
     </div>
   </div>
 </div>
@@ -257,11 +273,14 @@ Return true *if it is possible to form the array arr from pieces. Otherwise, ret
   <li class="page-item active">
     <a class="page-link" href="/algorithms/page/2/">2</a>
   </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item">
+    <a class="page-link" href="/algorithms/page/3/">3</a>
   </li>
   <li class="page-item">
-    <a href="/algorithms/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/algorithms/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/algorithms/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

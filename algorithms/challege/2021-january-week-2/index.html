@@ -6,8 +6,9 @@
     
     <title>2021 January Week 2 | AH~ sort</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
- Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; .">
+    <meta name="description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ Intuition Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; .">
     <meta name="generator" content="Hugo 0.82.0" />
     
     
@@ -29,22 +30,25 @@
     
     
     <meta property="og:title" content="2021 January Week 2" />
-<meta property="og:description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
- Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ." />
+<meta property="og:description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ Intuition Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blog.ahsort.com/algorithms/challege/2021-january-week-2/" /><meta property="article:section" content="algorithms" />
 <meta property="article:published_time" content="2021-04-20T08:57:52&#43;08:00" />
 <meta property="article:modified_time" content="2021-04-20T08:57:52&#43;08:00" />
 
 <meta itemprop="name" content="2021 January Week 2">
-<meta itemprop="description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
- Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ."><meta itemprop="datePublished" content="2021-04-20T08:57:52&#43;08:00" />
+<meta itemprop="description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ Intuition Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ."><meta itemprop="datePublished" content="2021-04-20T08:57:52&#43;08:00" />
 <meta itemprop="dateModified" content="2021-04-20T08:57:52&#43;08:00" />
 <meta itemprop="wordCount" content="980">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021 January Week 2"/>
-<meta name="twitter:description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
- Intution Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ."/>
+<meta name="twitter:description" content="Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ Intuition Solution def solve(s: List[str], t: List[str]) -&gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; ."/>
 
 	
   </head>
@@ -142,25 +146,25 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="check-if-two-string-arrays-are-equivalent">Check If Two String Arrays are Equivalent</h2>
 <blockquote>
-<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if the two arrays <strong>respresent</strong> the same string, and <code>false</code> otherwise.</em>
-A string is <strong>represented</strong> by an array if the array elements concatenated <strong>in order</strong> forms the string.</p>
+<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if the two arrays <strong>represent</strong> the same string, and <code>false</code> otherwise.</em></p>
+<p>A string is <strong>represented</strong> by an array if the array elements concatenated <strong>in order</strong> forms the string.</p>
 </blockquote>
-<h3 id="intution">Intution</h3>
+<h3 id="intuition">Intuition</h3>
 <h3 id="solution">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(s: List[str], t: List[str]) <span style="color:#f92672">-&gt;</span> bool:
     <span style="color:#66d9ef">return</span> all(i <span style="color:#f92672">==</span> j <span style="color:#66d9ef">for</span> i, j <span style="color:#f92672">in</span> zip_longest(chain(<span style="color:#f92672">*</span>s), chain(<span style="color:#f92672">*</span>t))
     <span style="color:#75715e"># return &#39;&#39;.join(s) == &#39;&#39;.join(t)</span>
 </code></pre></div><h2 id="word-ladder">Word Ladder</h2>
 <blockquote>
-<p>A <strong>transfomation sequence</strong> from word <code>beginWord</code> to word <code>endWord</code> using a dictionary <code>wordList</code> is a sequence of words <code>beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk</code>, such that:</p>
+<p>A <strong>transformation sequence</strong> from word <code>beginWord</code> to word <code>endWord</code> using a dictionary <code>wordList</code> is a sequence of words <code>beginWord -&gt; s1 -&gt; s2 -&gt; ... -&gt; sk</code>, such that:</p>
 <ul>
-<li>Every adjecent pair of words differs by a single letter.</li>
+<li>Every adjacent pair of words differs by a single letter.</li>
 <li>Every <code>si</code> for <code>1 &lt;= i &lt;= k</code> is in <code>wordList</code>. Note that <code>beginWord</code> does not need to be in <code>wordList</code>.</li>
-<li><code>sk == endWord</code>
-Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictionary <code>wordList</code>, return the <strong>number of words</strong> in the <strong>shortest transformation sequence</strong> from <code>beginWord</code> to <code>endWord</code>, or <code>0</code> if no such sequence exists.</li>
+<li><code>sk == endWord</code></li>
 </ul>
+<p>Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictionary <code>wordList</code>, return the <strong>number of words</strong> in the <strong>shortest transformation sequence</strong> from <code>beginWord</code> to <code>endWord</code>, or <code>0</code> if no such sequence exists.</p>
 </blockquote>
-<h3 id="intution-1">Intution</h3>
+<h3 id="intuition-1">Intuition</h3>
 <h3 id="solution-1">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(words: List[str], begin: str, end: str) <span style="color:#f92672">-&gt;</span> int:
     <span style="color:#66d9ef">if</span> end <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> words:
@@ -172,10 +176,10 @@ Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictiona
             key <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>:i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">+</span> w[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
             aux[key]<span style="color:#f92672">.</span>add(w)
 
-    cand <span style="color:#f92672">=</span> deque([(begin, <span style="color:#ae81ff">1</span>)])
+    candidate <span style="color:#f92672">=</span> deque([(begin, <span style="color:#ae81ff">1</span>)])
     seen <span style="color:#f92672">=</span> {begin}
-    <span style="color:#66d9ef">while</span> cand:
-        word, depth <span style="color:#f92672">=</span> cand<span style="color:#f92672">.</span>popleft()
+    <span style="color:#66d9ef">while</span> candidate:
+        word, depth <span style="color:#f92672">=</span> candidate<span style="color:#f92672">.</span>popleft()
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(word)):
             key <span style="color:#f92672">=</span> word[<span style="color:#ae81ff">0</span>:i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">+</span> word[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
             <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> aux[key]:
@@ -183,18 +187,18 @@ Given two words, <code>beginWord</code> and <code>endWord</code>, and a dictiona
                     <span style="color:#66d9ef">return</span> depth <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
                 <span style="color:#66d9ef">if</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> seen:
                     seen<span style="color:#f92672">.</span>add(w)
-                    cand<span style="color:#f92672">.</span>append((w, depth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+                    candidate<span style="color:#f92672">.</span>append((w, depth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
 </code></pre></div><h2 id="create-sorted-array-through-instructions">Create Sorted Array through Instructions</h2>
 <blockquote>
-<p>Given an integer array <code>instuctions</code>, you are asked to create a sorted array from the elements in <code>instructions</code>. You strat with an empty container <code>nums</code>. For each element from <strong>left to right</strong> in <code>instructions</code>, insert it into <code>nums</code>. The <strong>cost</strong>of each insertion is the <strong>minumum</strong> of the following:</p>
+<p>Given an integer array <code>instructions</code>, you are asked to create a sorted array from the elements in <code>instructions</code>. You start with an empty container <code>nums</code>. For each element from <strong>left to right</strong> in <code>instructions</code>, insert it into <code>nums</code>. The <strong>cost</strong>of each insertion is the <strong>minimum</strong> of the following:</p>
 <ul>
-<li>The number of elements currently in <code>nums</code> that are <strong>strictly less than</strong> <code>instuctions[i]</code>.</li>
-<li>The number of elments currently in<code>nums</code> that are <strong>strictly greater than</strong> <code>instructions[i]</code>.
-For example, if inserting element <code>3</code> into <code>nums = [1,2,3,5]</code>, the <strong>cost</strong> of insertion is <code>min(2,1)</code> (element1 <code>1</code> and <code>2</code> are less than <code>3</code>, element <code>5</code> is greater than <code>3</code>) and <code>nums</code> will become <code>[1,2,3,3,5]</code>.
-Return the <strong>total cost</strong> to insert all elements from <code>instructions</code> into <code>nums</code>. Since tha answer may be large, return it <strong>modulo</strong> <code>10**9 + 7</code>.</li>
+<li>The number of elements currently in <code>nums</code> that are <strong>strictly less than</strong> <code>instructions[i]</code>.</li>
+<li>The number of elements currently in<code>nums</code> that are <strong>strictly greater than</strong> <code>instructions[i]</code>.</li>
 </ul>
+<p>For example, if inserting element <code>3</code> into <code>nums = [1,2,3,5]</code>, the <strong>cost</strong> of insertion is <code>min(2,1)</code> (element1 <code>1</code> and <code>2</code> are less than <code>3</code>, element <code>5</code> is greater than <code>3</code>) and <code>nums</code> will become <code>[1,2,3,3,5]</code>.
+Return the <strong>total cost</strong> to insert all elements from <code>instructions</code> into <code>nums</code>. Since tha answer may be large, return it <strong>modulo</strong> <code>10**9 + 7</code>.</p>
 </blockquote>
 <h3 id="solution-2">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(instructions: List[int]) <span style="color:#f92672">-&gt;</span> int:
@@ -242,7 +246,7 @@ Return the <strong>total cost</strong> to insert all elements from <code>instruc
 <blockquote>
 <p>Given two sorted integer <code>nums1</code> and <code>nums2</code>, merge <code>nums2</code> into <code>nums1</code> as one sorted array.</p>
 </blockquote>
-<h3 id="intution-2">Intution</h3>
+<h3 id="intuition-2">Intuition</h3>
 <h3 id="solution-3">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums1: List[int], m: int, nums2: List[int], n: int) <span style="color:#f92672">-&gt;</span> None:
     end <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> n
@@ -258,9 +262,9 @@ Return the <strong>total cost</strong> to insert all elements from <code>instruc
         end, n <span style="color:#f92672">=</span> end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 </code></pre></div><h2 id="add-two-numbers">Add Two Numbers</h2>
 <blockquote>
-<p>Given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stroed in <strong>reversed order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</p>
+<p>Given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reversed order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</p>
 </blockquote>
-<h3 id="intution-3">Intution</h3>
+<h3 id="intuition-3">Intuition</h3>
 <h3 id="solution-4">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(s: ListNode, t: ListNode) <span style="color:#f92672">-&gt;</span> ListNode:
     c <span style="color:#f92672">=</span> dummy <span style="color:#f92672">=</span> ListNode()
@@ -281,7 +285,7 @@ Return the <strong>total cost</strong> to insert all elements from <code>instruc
 <p>Given an array <code>people</code> where <code>people[i]</code> is the weight of the <code>i</code>th person, and an <strong>infinite number of boats</strong> where each boat can carry a maximum weigth of <code>limit</code>.  Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most <code>limit</code>.
 Return the minimum number of boats to carry every given person.</p>
 </blockquote>
-<h3 id="intution-4">Intution</h3>
+<h3 id="intuition-4">Intuition</h3>
 <h3 id="solution-5">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(people: List[int], limit: int) <span style="color:#f92672">-&gt;</span> int:
     people<span style="color:#f92672">.</span>sort()
@@ -302,10 +306,10 @@ Return the <strong>minimum number</strong> of operations to reduce <code>x</code
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 10**5</code></li>
 </ul>
-<h3 id="intution-5">Intution</h3>
-<p>First, solving this problem using DP, but then realized that the constraints are too large.
-Then, thinking in reverse, that, instead of finding the minimum <code>prefix + suffix</code>, find the maximum subarray.
-Final, finding the maximum subarray is standard and can be done greedily.</p>
+<h3 id="intuition-5">Intuition</h3>
+<p>First, solving this problem using DP, but then realized that the constraints are too large.</p>
+<p>Then, thinking in reverse, that, instead of finding the minimum <code>prefix + suffix</code>, find the maximum subarray.</p>
+<p>Final, finding the maximum subarray is standard and can be done greedily.</p>
 <h3 id="solution-6">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(nums: List[int], x: int) <span style="color:#f92672">-&gt;</span> int:
     target <span style="color:#f92672">=</span> sum(nums) <span style="color:#f92672">-</span> x

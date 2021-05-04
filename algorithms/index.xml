@@ -6,16 +6,37 @@
     <description>Recent content in Algorithms on AH~ sort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 09:42:47 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 17:08:48 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 February Week 2</title>
+      <link>http://blog.ahsort.com/algorithms/challege/2021-february-week-2/</link>
+      <pubDate>Mon, 03 May 2021 17:08:48 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/2021-february-week-2/</guid>
+      <description>Peeking Iterator  Design an iterator that supports the peek operation on a list in addition to the hasNext and the next operations. Implement the PeekingIterator class:
+ PeekingIterator(int[] nums) Initializes the object with the given integer array nums`. int next() Returns the next elements in the array and moves the pointer to the next element. bool hasNext() Returns true if there are still elements in the array. int peek() Returns the next element in the array without moving the pointer.</description>
+    </item>
+    
+    <item>
+      <title>2021 February Week 1</title>
+      <link>http://blog.ahsort.com/algorithms/challege/2021-february-week-1/</link>
+      <pubDate>Sun, 02 May 2021 19:14:50 +0800</pubDate>
+      
+      <guid>http://blog.ahsort.com/algorithms/challege/2021-february-week-1/</guid>
+      <description>Number of 1 bits  Write a function that takes an unsigned integer and returns the number of 1 bits it has (also know as the Hamming weight).
+ Intuition Use x &amp;amp; (x-1) remove the rightmost 1 bit.
+Solution def count_1s(n: int) -&amp;gt; int: result = 0 while n: result += 1 n &amp;amp;= n-1 return result Trim a Binary Search Tree  Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high].</description>
+    </item>
+    
     <item>
       <title>2021 January Week 5</title>
       <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-5/</link>
       <pubDate>Fri, 23 Apr 2021 09:42:47 +0800</pubDate>
       
       <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-5/</guid>
-      <description>Vertical Order Traversal of a Binary Tree Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
-Note: There may be multiple nodes in the same row and same column. In such a case, sort thest nodes by their values.
-Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].</description>
+      <description>Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+ Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].</description>
     </item>
     
     <item>
@@ -24,8 +45,8 @@ Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)
       <pubDate>Thu, 22 Apr 2021 16:16:03 +0800</pubDate>
       
       <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</guid>
-      <description>Determin if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
- Operation 1: Swap any two existing characters. eg. abcde -&amp;gt; aecdb, (b &amp;lt;-&amp;gt; e) Operation 2: Transform **every occurence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&amp;gt; bbcbaa (a &amp;lt;-&amp;gt; b). You can use the operations on either string as many times as necessary.</description>
+      <description>Determine if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
+ Operation 1: Swap any two existing characters. eg. abcde -&amp;gt; aecdb, (b &amp;lt;-&amp;gt; e) Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&amp;gt; bbcbaa (a &amp;lt;-&amp;gt; b).  You can use the operations on either string as many times as necessary.</description>
     </item>
     
     <item>
@@ -35,7 +56,8 @@ Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)
       
       <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</guid>
       <description>Get Maximum in Generated Array  Given an integer n. An Array nums of length n+1 is generated in the following way:
- nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &amp;lt;= 2i &amp;lt;= n nums[2*i + 1] = nums[i] + nums[i+1], when 2 &amp;lt;= 2*i + 1 &amp;lt;= n Return the maximum integer in the array nums`.   Solution def solve(n): if n &amp;lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.</description>
+ nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &amp;lt;= 2i &amp;lt;= n nums[2i + 1] = nums[i] + nums[i+1], when `2 &amp;lt;= 2i + 1 &amp;lt;= n  Return the maximum integer in the array nums.
+ Solution def solve(n): if n &amp;lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.</description>
     </item>
     
     <item>
@@ -53,8 +75,9 @@ Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)
       <pubDate>Tue, 20 Apr 2021 08:57:52 +0800</pubDate>
       
       <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-2/</guid>
-      <description>Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays respresent the same string, and false otherwise. A string is represented by an array if the array elements concatenated in order forms the string.
- Intution Solution def solve(s: List[str], t: List[str]) -&amp;gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &amp;#39;&amp;#39;.join(s) == &amp;#39;&amp;#39;.join(t) Word Ladder  A transfomation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&amp;gt; s1 -&amp;gt; s2 -&amp;gt; .</description>
+      <description>Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+ Intuition Solution def solve(s: List[str], t: List[str]) -&amp;gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &amp;#39;&amp;#39;.join(s) == &amp;#39;&amp;#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&amp;gt; s1 -&amp;gt; s2 -&amp;gt; .</description>
     </item>
     
     <item>
@@ -105,7 +128,7 @@ Do not allocate extra space for another array, you must do this by modifying the
       <pubDate>Mon, 18 Jan 2021 12:17:13 +0800</pubDate>
       
       <guid>http://blog.ahsort.com/algorithms/binary-tree/binary-tree/</guid>
-      <description>Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def bfs(root): result = [] queue = deque([root]) while queue: n = queue.</description>
+      <description>Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def preorder(root: TreeNode) -&amp;gt; List[int]: result = [] stack = [] while stack or root: if root: result.</description>
     </item>
     
     <item>
@@ -180,10 +203,10 @@ Return true *if it is possible to form the array arr from pieces. Otherwise, ret
     
     <item>
       <title>Weekly Contest 222</title>
-      <link>http://blog.ahsort.com/algorithms/contest/weekly-contest-222/</link>
+      <link>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</link>
       <pubDate>Sun, 03 Jan 2021 13:12:10 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/contest/weekly-contest-222/</guid>
+      <guid>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</guid>
       <description>1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
  def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.</description>
     </item>
