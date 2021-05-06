@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
  Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans &#43;= i &#43; 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &lt; len(nums): j = nums[i] if j &lt; len(nums) and nums[j] !">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">

@@ -9,7 +9,7 @@
     <meta name="description" content="Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
 A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
  def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &lt; nums[i]: dp[j] = max(dp[i], 1 &#43; dp[j]) return max(dp) def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans &#43;= 1 return ans ">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">

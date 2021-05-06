@@ -7,7 +7,7 @@
     <title>AH~ sort</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -99,6 +99,22 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Algorithms</span>
+    <h1 class="f3 near-black">
+      <a href="http://blog.ahsort.com/algorithms/challege/weekly-contest-222/" class="link black dim">
+        Weekly Contest 222
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
+ def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">

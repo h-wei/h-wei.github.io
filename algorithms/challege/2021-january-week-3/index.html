@@ -9,7 +9,7 @@
     <meta name="description" content="Get Maximum in Generated Array  Given an integer n. An Array nums of length n&#43;1 is generated in the following way:
  nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &lt;= 2i &lt;= n nums[2i &#43; 1] = nums[i] &#43; nums[i&#43;1], when `2 &lt;= 2i &#43; 1 &lt;= n  Return the maximum integer in the array nums.
  Solution def solve(n): if n &lt; 2: return n x = [0] * (n &#43; 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] &#43; x[j&#43;1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
