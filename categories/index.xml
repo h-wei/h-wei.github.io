@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on AH~ sort</title>
-    <link>http://blog.ahsort.com/categories/</link>
-    <description>Recent content in Categories on AH~ sort</description>
+    <title>Categories on Ah~ Sort</title>
+    <link>blog.ahsort.com/categories/</link>
+    <description>Recent content in Categories on Ah~ Sort</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 06 May 2021 16:53:17 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Algorithms</title>
-      <link>http://blog.ahsort.com/categories/algorithms/</link>
-      <pubDate>Thu, 06 May 2021 16:53:17 +0800</pubDate>
-      
-      <guid>http://blog.ahsort.com/categories/algorithms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>System Design</title>
-      <link>http://blog.ahsort.com/categories/system-design/</link>
-      <pubDate>Sun, 25 Apr 2021 08:53:12 +0800</pubDate>
-      
-      <guid>http://blog.ahsort.com/categories/system-design/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language>
+    <copyright>&amp;copy; 2021 Putao Huang
+</copyright><atom:link href="blog.ahsort.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

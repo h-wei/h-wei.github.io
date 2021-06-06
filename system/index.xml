@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Systems on AH~ sort</title>
-    <link>http://blog.ahsort.com/system/</link>
-    <description>Recent content in Systems on AH~ sort</description>
+    <title>Systems on Ah~ Sort</title>
+    <link>blog.ahsort.com/system/</link>
+    <description>Recent content in Systems on Ah~ Sort</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 25 Apr 2021 08:53:12 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/system/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>&amp;copy; 2021 Putao Huang
+</copyright>
+    <lastBuildDate>Sun, 25 Apr 2021 08:53:12 +0800</lastBuildDate><atom:link href="blog.ahsort.com/system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 Introduction</title>
-      <link>http://blog.ahsort.com/system/distributed-systems/01-introduction/</link>
+      <link>blog.ahsort.com/system/distributed-systems/01-introduction/</link>
       <pubDate>Sun, 25 Apr 2021 08:53:12 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/system/distributed-systems/01-introduction/</guid>
+      <guid>blog.ahsort.com/system/distributed-systems/01-introduction/</guid>
       <description>Questions  What is a distributed system? Why do people build distributed system? Why take this course?  Topic  fault tolerance consistency performance relationship  History Context Case Study: MapReduce  what pros and cons more details current status  Conclusion Lab 1 </description>
     </item>
     

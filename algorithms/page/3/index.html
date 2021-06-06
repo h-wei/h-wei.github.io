@@ -1,192 +1,544 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>AH~ sort</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.83.1" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
+<html lang='en' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 
-    
-    
-      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
-    
 
-    
+<title>Ah~ Sort</title>
 
-    
-      
+<meta name="generator" content="Hugo Eureka 0.8.0" />
+<link rel="stylesheet" href="/blog.ahsort.com/css/eureka.css">
+<script defer src="/blog.ahsort.com/js/eureka.min.js"></script>
 
-    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-    
-    
-      <link href="/algorithms/index.xml" rel="alternate" type="application/rss+xml" title="AH~ sort" />
-      <link href="/algorithms/index.xml" rel="feed" type="application/rss+xml" title="AH~ sort" />
-      
-    
-    
-    <meta property="og:title" content="Algorithms" />
-<meta property="og:description" content="" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/blog.ahsort.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/blog.ahsort.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="Eureka is a elegant and powerful theme for Hugo.">
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "Linked List",
+            "description": "List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next  ",
+            "url": "blog.ahsort.com/algorithms/linked-list/linked-list/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "Missing Number",
+            "description": "Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.\n Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i \u0026lt; len(nums): j = nums[i] if j \u0026lt; len(nums) and nums[j] !",
+            "url": "blog.ahsort.com/algorithms/array/missing-number/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "Edit Distance",
+            "description": "One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.\n def solve(s, t): m, n = len(s), len(t) if abs(m - n) \u0026gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) \u0026lt; 2 i = j = k = 0 while k \u0026lt; min(m, n): if s[i] !",
+            "url": "blog.ahsort.com/algorithms/dynamic-programming/edit-distance/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "Longest Increasing Subsequence",
+            "description": "Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.\nA subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]\n def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] \u0026lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp)  def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans  ",
+            "url": "blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
+            "name": "Longest Common Subsequence",
+            "description": "Longest Common Subsequence (lc1143)  Given two strings s and t, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, \u0026ldquo;ace\u0026rdquo; is a subsequence of \u0026ldquo;abcde\u0026rdquo; while \u0026ldquo;aec\u0026rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings. If there is no common subsequence, return 0.",
+            "url": "blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/"
+        },{
+            "@type":"ListItem",
+            "position":  6 ,
+            "name": "2021 January Week 1",
+            "description": "Check Array Formation Through Concatenation (LC1640)  Given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].\nReturn true *if it is possible to form the array arr from pieces. Otherwise, return false.\n Intuition Because the arr\u0026rsquo;s integers and the pieces' integers are distinct, we can sort the integers of the pieces with the index of the arr\u0026rsquo;s integers.",
+            "url": "blog.ahsort.com/algorithms/challege/2021-january-week-1/"
+        },{
+            "@type":"ListItem",
+            "position":  7 ,
+            "name": "Weekly Contest 222",
+            "description": "1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.\n def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck \u0026lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans  1711.",
+            "url": "blog.ahsort.com/algorithms/contest/weekly-contest-222/"
+        },{
+            "@type":"ListItem",
+            "position":  8 ,
+            "name": "Trie",
+            "description": "class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord('a') if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord('a') node = node.",
+            "url": "blog.ahsort.com/algorithms/trie/trie/"
+        }
+    ]
+}
+</script><meta property="og:title" content="Ah~ Sort" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://blog.ahsort.com/algorithms/" />
 
-<meta itemprop="name" content="Algorithms">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Algorithms"/>
-<meta name="twitter:description" content=""/>
 
-	
-  </head>
+<meta property="og:image" content="/blog.ahsort.com/images/icon.png">
 
-  <body class="ma0 avenir bg-near-white">
 
+<meta property="og:url" content="blog.ahsort.com/algorithms/" />
+
+
+
+
+
+<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
+
+
+
+
+
+<meta property="og:locale" content="en" />
+
+
+
+
+<meta property="og:site_name" content="Ah~ Sort" />
+
+
+
+
+
+
+<meta property="og:updated_time" content="2021-06-04T09:26:12&#43;08:00" />
+
+
+
+<meta property="article:section" content="algorithms" />
+
+
+<link rel="alternate" type="application/rss+xml" href="blog.ahsort.com/algorithms/index.xml" title="Ah~ Sort" />
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/blog.ahsort.com/" class="mr-6 text-primary-text text-xl font-bold">Ah~ Sort</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/blog.ahsort.com/algorithms/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Algorithms</a>
+            <a href="/blog.ahsort.com/system/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">System</a>
+            <a href="/blog.ahsort.com/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+    <h1 class="font-bold text-3xl text-primary-text">Algorithms</h1>
+    
+</article>
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/linked-list/linked-list/" class="font-bold text-xl hover:text-eureka">Linked List</a>
+</div>
+<div class="content">
+  List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-07</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1 min read</span>
+    </div>
+    
     
 
+    
+</div>
+
+  </div>
+
   
+</div>
+  </div>
   
-  <header class="cover bg-top" style="background-image: url('http://blog.ahsort.com/images/gohugo-default-sample-hero-image.jpg');">
-    <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        AH~ sort
-      
-    </a>
-    <div class="flex-l items-center">
-      
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/array/missing-number/" class="font-bold text-xl hover:text-eureka">Missing Number</a>
+</div>
+<div class="content">
+  Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
+ Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans &#43;= i &#43; 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &amp;lt; len(nums): j = nums[i] if j &amp;lt; len(nums) and nums[j] !
+</div>
 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-07</span>
     </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
   </div>
-</nav>
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Algorithms
-        </h1>
-        
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Algorithms</span>
-    <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/challege/weekly-contest-222/" class="link black dim">
-        Weekly Contest 222
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
- def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.
-    </div>
+  
+</div>
   </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/dynamic-programming/edit-distance/" class="font-bold text-xl hover:text-eureka">Edit Distance</a>
 </div>
+<div class="content">
+  One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
+ def solve(s, t): m, n = len(s), len(t) if abs(m - n) &amp;gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &amp;lt; 2 i = j = k = 0 while k &amp;lt; min(m, n): if s[i] !
 </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Algorithms</span>
-    <h1 class="f3 near-black">
-      <a href="http://blog.ahsort.com/algorithms/trie/trie/" class="link black dim">
-        Trie
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord(&#39;a&#39;) if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord(&#39;a&#39;) node = node.
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-04</span>
     </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
   </div>
+
+  
 </div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/" class="font-bold text-xl hover:text-eureka">Longest Increasing Subsequence</a>
 </div>
-      
-    </section>
+<div class="content">
+  Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
+A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
+ def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &amp;lt; nums[i]: dp[j] = max(dp[i], 1 &#43; dp[j]) return max(dp)  def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans &#43;= 1 return ans  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/" class="font-bold text-xl hover:text-eureka">Longest Common Subsequence</a>
+</div>
+<div class="content">
+  Longest Common Subsequence (lc1143)  Given two strings s and t, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, &amp;ldquo;ace&amp;rdquo; is a subsequence of &amp;ldquo;abcde&amp;rdquo; while &amp;ldquo;aec&amp;rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings. If there is no common subsequence, return 0.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/challege/2021-january-week-1/" class="font-bold text-xl hover:text-eureka">2021 January Week 1</a>
+</div>
+<div class="content">
+  Check Array Formation Through Concatenation (LC1640)  Given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].
+Return true *if it is possible to form the array arr from pieces. Otherwise, return false.
+ Intuition Because the arr&amp;rsquo;s integers and the pieces&#39; integers are distinct, we can sort the integers of the pieces with the index of the arr&amp;rsquo;s integers.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/contest/weekly-contest-222/" class="font-bold text-xl hover:text-eureka">Weekly Contest 222</a>
+</div>
+<div class="content">
+  1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
+ def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans &#43; truck * t ans &#43;= pick * t truck -= pick return ans  1711.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="blog.ahsort.com/algorithms/trie/trie/" class="font-bold text-xl hover:text-eureka">Trie</a>
+</div>
+<div class="content">
+  class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord(&#39;a&#39;) if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord(&#39;a&#39;) node = node.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+</div>
+
+
+</div>
+
 <ul class="pagination">
   <li class="page-item">
-    <a href="/algorithms/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    <a href="blog.ahsort.com/algorithms/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/algorithms/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <a href="blog.ahsort.com/algorithms/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/algorithms/">1</a>
+    <a class="page-link" href="blog.ahsort.com/algorithms/">1</a>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/algorithms/page/2/">2</a>
+    <a class="page-link" href="blog.ahsort.com/algorithms/page/2/">2</a>
   </li>
   <li class="page-item active">
-    <a class="page-link" href="/algorithms/page/3/">3</a>
+    <a class="page-link" href="blog.ahsort.com/algorithms/page/3/">3</a>
   </li>
   <li class="page-item disabled">
     <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/algorithms/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="blog.ahsort.com/algorithms/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
-</article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://blog.ahsort.com/" >
-    &copy;  AH~ sort 2021 
-  </a>
-    <div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-  </div>
-</footer>
-
+      </div>
+    </div>
     
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 Putao Huang
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
 
-  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
-
-
-  </body>
 </html>

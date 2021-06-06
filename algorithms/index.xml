@@ -1,112 +1,177 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithms on AH~ sort</title>
-    <link>http://blog.ahsort.com/algorithms/</link>
-    <description>Recent content in Algorithms on AH~ sort</description>
+    <title>Algorithms on Ah~ Sort</title>
+    <link>blog.ahsort.com/algorithms/</link>
+    <description>Recent content in Algorithms on Ah~ Sort</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 06 May 2021 16:53:17 +0800</lastBuildDate><atom:link href="http://blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>&amp;copy; 2021 Putao Huang
+</copyright>
+    <lastBuildDate>Fri, 04 Jun 2021 09:26:12 +0800</lastBuildDate><atom:link href="blog.ahsort.com/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 March Week 4</title>
+      <link>blog.ahsort.com/algorithms/challege/2021-march-week-4/</link>
+      <pubDate>Fri, 04 Jun 2021 09:26:12 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/challege/2021-march-week-4/</guid>
+      <description>Vowel Spellchecker  Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.
+  For a given query word, the spell checker handles two categories of spelling mistakes:
+ Capitalization: If the query matches a word in the wordlist, then the query word is returned with the same case as the case in the wordlist. Vowel Errors: If after replacing the vowels &#39;aeiou&#39; of the query word with any vowelindiviually, it matches a word in the wordlist, then the query word is return ted with the same case as the case in the wordlist.</description>
+    </item>
+    
+    <item>
+      <title>2021 March Week 3</title>
+      <link>blog.ahsort.com/algorithms/challege/2021-march-week-3/</link>
+      <pubDate>Thu, 03 Jun 2021 07:23:55 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/challege/2021-march-week-3/</guid>
+      <description>Encode and Decode TinyURL class TinyUrl: CODE_LIST = string.ascii_lowercase + string.digits NUM_OF_CODE = 5 BASE_URL = &#39;http://tinyurl.com&#39; def __init__(self): self._long2short = {} self._short2long = {} def encode(long_url: str) -&amp;gt; str: while long_url not in self._long2short: code = &#39;&#39;.join(random.choices(TinyUrl.CODE_LIST, k = TinyUrl.NUM_OF_CODE)) if code not in self._short2long: self._short2long[code] = long_url self._long2short[long_url] = code return f&#39;{TinyUrlBASE_URL}/{self._long2short[long_url]}&#39; def decode(short_url: str) -&amp;gt; str: return self._short2long[short_url[-TinyUrl.NUM_OF_CODE:]]  Best Time to Buy and Seel Stock with Transaction Fee  Given an array prices where prices[i] is the price of a given stock on the i-th day, and an integer fee representing a transaction fee.</description>
+    </item>
+    
+    <item>
+      <title>2021 March Week 2</title>
+      <link>blog.ahsort.com/algorithms/challege/2021-march-week-2/</link>
+      <pubDate>Wed, 02 Jun 2021 20:55:43 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/challege/2021-march-week-2/</guid>
+      <description>Remove Palindromic Subsequences  Given a string s consisting only of letters &#39;a&#39; and &#39;b&#39;. In a single step you can remove one palindromic subsequence from s.
+  Return the minimum number of steps to make the given string empty.
+ def remove_palindromic_subsequences(s: str) -&amp;gt; int: # remove all &#39;a&#39;, then &#39;b&#39; if not s: return 0 return 1 if s == s[::-1] else 2  Add One Row to Tree  Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth depth.</description>
+    </item>
+    
+    <item>
+      <title>2021 March Week 1</title>
+      <link>blog.ahsort.com/algorithms/challege/2021-march-week-1/</link>
+      <pubDate>Tue, 01 Jun 2021 22:10:51 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/challege/2021-march-week-1/</guid>
+      <description>Distribute Candies  Alice has n candies, where the ith candy is of type candyType[i]. Alice notices that she started to gain weight, so she visited a doctor.
+  The doctor advised Alice to only eat n/2 of the candies she has (n is always even). Alice likes her candies very much, and she wants to eat the maximum number of different types of candies while still following the doctor&amp;rsquo;s advice.
+  Given the integer array candyType of length n, return the maximum number of different types of candies she can eat if she only eats n/2 of them.</description>
+    </item>
+    
+    <item>
+      <title>2021 February Week 4</title>
+      <link>blog.ahsort.com/algorithms/challege/2021-february-week-4/</link>
+      <pubDate>Sun, 30 May 2021 22:09:40 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/challege/2021-february-week-4/</guid>
+      <description>Longest Word in Dictionary through Deleting  Given a string s and a string array dict, return the longest string in the dictionary that can be formed by deleting some of the given string characters. If there is more than one possible result, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
+ def longest_word(s: str, d: List[str]) -&amp;gt; str: def contains(s, word): m, n = len(s), len(word) if m &amp;lt; n: return False i = j = 0 while i &amp;lt; m and j &amp;lt; n: if word[j] == s[i]: j += 1 i += 1 return j &amp;gt;= n d.</description>
+    </item>
+    
+    <item>
+      <title>Biweekly Contest 53</title>
+      <link>blog.ahsort.com/algorithms/contest/biweekly-contest-53/</link>
+      <pubDate>Sun, 30 May 2021 17:23:17 +0800</pubDate>
+      
+      <guid>blog.ahsort.com/algorithms/contest/biweekly-contest-53/</guid>
+      <description>1876. Substrings of Size Three with Distinct Characters  A string is good if there are no repeated characters.
+  Given a string s, return the number of good substrings of length three in s.
+ def count_good_substrings(s: str) -&amp;gt; int: return sum(1 for i in range(len(s) - 2) if len(set(list(i:i+3))) == 3)  1877. Minimize Maximum Pair Sum in Array  The pair sum of a pair (a, b) is equal to a+b. The maximum pair sum is the largest pair sum in a list of pairs.</description>
+    </item>
+    
     <item>
       <title>2021 February Week 3</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-february-week-3/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-february-week-3/</link>
       <pubDate>Thu, 06 May 2021 16:53:17 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-february-week-3/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-february-week-3/</guid>
       <description>The K Weakest Rows in a Matrix  Given an m x n binary matrix mat of 1&amp;rsquo;s (representing soldiers) and 0&amp;rsquo;s (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1&amp;rsquo;s will appear to the left of all the 0&amp;rsquo;s in each row. A row i is weaker than a row j if one of the following is true:
  The number of soldiers in row i is less than the number of soldiers in row j.</description>
     </item>
     
     <item>
       <title>2021 February Week 2</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-february-week-2/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-february-week-2/</link>
       <pubDate>Mon, 03 May 2021 17:08:48 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-february-week-2/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-february-week-2/</guid>
       <description>Peeking Iterator  Design an iterator that supports the peek operation on a list in addition to the hasNext and the next operations. Implement the PeekingIterator class:
  PeekingIterator(int[] nums) Initializes the object with the given integer array nums`. int next() Returns the next elements in the array and moves the pointer to the next element. bool hasNext() Returns true if there are still elements in the array. int peek() Returns the next element in the array without moving the pointer.</description>
     </item>
     
     <item>
       <title>2021 February Week 1</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-february-week-1/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-february-week-1/</link>
       <pubDate>Sun, 02 May 2021 19:14:50 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-february-week-1/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-february-week-1/</guid>
       <description>Number of 1 bits  Write a function that takes an unsigned integer and returns the number of 1 bits it has (also know as the Hamming weight).
  Intuition Use x &amp;amp; (x-1) remove the rightmost 1 bit.
-Solution def count_1s(n: int) -&amp;gt; int: result = 0 while n: result += 1 n &amp;amp;= n-1 return result Trim a Binary Search Tree  Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high].</description>
+Solution def count_1s(n: int) -&amp;gt; int: result = 0 while n: result += 1 n &amp;amp;= n-1 return result  Trim a Binary Search Tree  Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high].</description>
     </item>
     
     <item>
       <title>2021 January Week 5</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-5/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-january-week-5/</link>
       <pubDate>Fri, 23 Apr 2021 09:42:47 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-5/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-january-week-5/</guid>
       <description>Vertical Order Traversal of a Binary Tree  Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
 Note: There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
- Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].</description>
+ Solution def solve(root: ListNode) -&amp;gt; List[List[int]]: level = [(root, 0)] columns = defaultdict(list) while level: for c, val in sorted([(c, node.val) for node, c in level]): columns[c].append(val) level = [ (kid, t) for node, c in level for kid, t in ((node.</description>
     </item>
     
     <item>
       <title>2021 January Week 4</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-january-week-4/</link>
       <pubDate>Thu, 22 Apr 2021 16:16:03 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-4/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-january-week-4/</guid>
       <description>Determine if Two Strings Are Close  Two strings are considered close if you can attain one from the other using the following operations:
  Operation 1: Swap any two existing characters. eg. abcde -&amp;gt; aecdb, (b &amp;lt;-&amp;gt; e) Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character. eg. aacabb -&amp;gt; bbcbaa (a &amp;lt;-&amp;gt; b).  You can use the operations on either string as many times as necessary.</description>
     </item>
     
     <item>
       <title>2021 January Week 3</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-january-week-3/</link>
       <pubDate>Wed, 21 Apr 2021 09:32:15 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-3/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-january-week-3/</guid>
       <description>Get Maximum in Generated Array  Given an integer n. An Array nums of length n+1 is generated in the following way:
  nums[0] = 0 nums[1] = 1 nums[2i] = nums[i], when `2 &amp;lt;= 2i &amp;lt;= n nums[2i + 1] = nums[i] + nums[i+1], when `2 &amp;lt;= 2i + 1 &amp;lt;= n  Return the maximum integer in the array nums.
- Solution def solve(n): if n &amp;lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.</description>
+ Solution def solve(n): if n &amp;lt; 2: return n x = [0] * (n + 1) x[1] = 1 for i in range(2, n): j, odd = divmod(i, 2) if odd: x[i] = x[j] + x[j+1] else: x[i] = x[j] result = max(result, x[i]) return result  Kth Largest Element in an Array  Given an integer array nums and an integer k, return the kth largest element in the array.</description>
     </item>
     
     <item>
       <title>Weekly Contest 223</title>
-      <link>http://blog.ahsort.com/algorithms/contest/weekly-contest-223/</link>
+      <link>blog.ahsort.com/algorithms/contest/weekly-contest-223/</link>
       <pubDate>Tue, 20 Apr 2021 19:32:20 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/contest/weekly-contest-223/</guid>
+      <guid>blog.ahsort.com/algorithms/contest/weekly-contest-223/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2021 January Week 2</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-2/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-january-week-2/</link>
       <pubDate>Tue, 20 Apr 2021 08:57:52 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-2/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-january-week-2/</guid>
       <description>Check If Two String Arrays are Equivalent  Given two strings s and t, return true if the two arrays represent the same string, and false otherwise.
 A string is represented by an array if the array elements concatenated in order forms the string.
- Intuition Solution def solve(s: List[str], t: List[str]) -&amp;gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &amp;#39;&amp;#39;.join(s) == &amp;#39;&amp;#39;.join(t) Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&amp;gt; s1 -&amp;gt; s2 -&amp;gt; .</description>
+ Intuition Solution def solve(s: List[str], t: List[str]) -&amp;gt; bool: return all(i == j for i, j in zip_longest(chain(*s), chain(*t)) # return &#39;&#39;.join(s) == &#39;&#39;.join(t)  Word Ladder  A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&amp;gt; s1 -&amp;gt; s2 -&amp;gt; .</description>
     </item>
     
     <item>
       <title>Top Easy</title>
-      <link>http://blog.ahsort.com/algorithms/array/top-easy/</link>
+      <link>blog.ahsort.com/algorithms/array/top-easy/</link>
       <pubDate>Sat, 17 Apr 2021 23:13:53 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/array/top-easy/</guid>
+      <guid>blog.ahsort.com/algorithms/array/top-easy/</guid>
       <description>Remove Duplates from Sorted Array  Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
- def solve(nums): offset = 0 for x in nums: if x != nums[offset]: offset += 1 nums[offset] = x return offset + 1 if nums else 0 Best Time to Buy and Sell Stock II  You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
+ def solve(nums): offset = 0 for x in nums: if x != nums[offset]: offset += 1 nums[offset] = x return offset + 1 if nums else 0  Best Time to Buy and Sell Stock II  You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
     </item>
     
     <item>
       <title>Reach Target</title>
-      <link>http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</link>
+      <link>blog.ahsort.com/algorithms/dynamic-programming/reach-target/</link>
       <pubDate>Tue, 19 Jan 2021 09:53:02 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</guid>
+      <guid>blog.ahsort.com/algorithms/dynamic-programming/reach-target/</guid>
       <description>Maximum (Minimum) Path to Reach a Target Statement:
  Given a target find maximum (minimum) cost/path/sum to reach a target. Approach: Choose minimum (maximum) path among all possible paths before the current state, then add the current value. routes[i] = max(routes[j] for j in range(k, i-1)) + values[i]
  Min Cost Climbing Stairs LC746  Given a staircase, the i-th step has some non-negative cost cost[i]. You can either climb one or two steps, find minimum cost to reach the top of the staircase.</description>
@@ -114,120 +179,121 @@ Do not allocate extra space for another array, you must do this by modifying the
     
     <item>
       <title>Island</title>
-      <link>http://blog.ahsort.com/algorithms/depth-first-search/island/</link>
+      <link>blog.ahsort.com/algorithms/depth-first-search/island/</link>
       <pubDate>Mon, 18 Jan 2021 17:02:35 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/depth-first-search/island/</guid>
+      <guid>blog.ahsort.com/algorithms/depth-first-search/island/</guid>
       <description>Number of Islands  Given an m x n 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), return the number of islands. Assume all four edges of the grid are surrounded by water.
- def solve(grid): result = 0 m, n = len(grid), len(grid[0]) for i in range(m): for j in range(n): if grid[i][j] == &amp;#39;1&amp;#39;: result += 1 queue = deque([(i, j)]) grid[i][j] = &amp;#39;&amp;#39; while queue: x, y = queue.</description>
+ def solve(grid): result = 0 m, n = len(grid), len(grid[0]) for i in range(m): for j in range(n): if grid[i][j] == &#39;1&#39;: result += 1 queue = deque([(i, j)]) grid[i][j] = &#39;&#39; while queue: x, y = queue.popleft() for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)): if 0 &amp;lt;= x+dx &amp;lt; m and 0 &amp;lt;= y+dy &amp;lt; n and grid[x+dx][y+dy] == &#39;1&#39;: queue.</description>
     </item>
     
     <item>
       <title>Remove Elements</title>
-      <link>http://blog.ahsort.com/algorithms/linked-list/remove-elements/</link>
+      <link>blog.ahsort.com/algorithms/linked-list/remove-elements/</link>
       <pubDate>Mon, 18 Jan 2021 12:20:52 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/linked-list/remove-elements/</guid>
+      <guid>blog.ahsort.com/algorithms/linked-list/remove-elements/</guid>
       <description>Remove Linked List Elements (LC203)  Remove all elements from a linked list of integers that have value val.
- def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once.</description>
+ def solve(head, val): c = dummy = ListNode(next=head) while head: if head.val != val: c = head else: c.next = head.next head = head.next return dummy.next  Remove Duplicates from Sorted List (LC83)  Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return *the linked list sorted as well.</description>
     </item>
     
     <item>
       <title>Binary Tree</title>
-      <link>http://blog.ahsort.com/algorithms/binary-tree/binary-tree/</link>
+      <link>blog.ahsort.com/algorithms/binary-tree/binary-tree/</link>
       <pubDate>Mon, 18 Jan 2021 12:17:13 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/binary-tree/binary-tree/</guid>
-      <description>Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def preorder(root: TreeNode) -&amp;gt; List[int]: result = [] stack = [] while stack or root: if root: result.</description>
+      <guid>blog.ahsort.com/algorithms/binary-tree/binary-tree/</guid>
+      <description>Binary Tree Data Structure of the Node class TreeNode: def __init__(self, val, left = None, right = None): self.val = val self.left = left self.right = right  Traversal def preorder(root): return [root.val] + preorder(root.left) + preorder(root.right) if root else [] def inorder(root): return inorder(root.left) + [root.val] + inorder(root.right) if root else [] def postorder(root): return postorder(root.left) + postorder(root.right) + [root.val] if root else [] def preorder(root: TreeNode) -&amp;gt; List[int]: result = [] stack = [] while stack or root: if root: result.</description>
     </item>
     
     <item>
       <title>Breadth First Search</title>
-      <link>http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/</link>
+      <link>blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/</link>
       <pubDate>Sat, 09 Jan 2021 20:56:31 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/</guid>
+      <guid>blog.ahsort.com/algorithms/breadth-first-search/breadth-first-search/</guid>
       <description>Word Ladder (LC127)  Given two words begin and end, and a dictionary words, return *the length of the shortest transformation sequence from begin to end, such that:
  Only one letter can be changed at a time. Each transformed word must exist in the word list.    Return 0 if there is no such transformation sequenece
- def solve(begin, end, words): if end not in words: return 0 d = defaultdict(set) n = len(begin) for word in words: for i in range(n): d[word[0:i] + &amp;#39;?</description>
+ def solve(begin, end, words): if end not in words: return 0 d = defaultdict(set) n = len(begin) for word in words: for i in range(n): d[word[0:i] + &#39;?</description>
     </item>
     
     <item>
       <title>Linked List</title>
-      <link>http://blog.ahsort.com/algorithms/linked-list/linked-list/</link>
+      <link>blog.ahsort.com/algorithms/linked-list/linked-list/</link>
       <pubDate>Thu, 07 Jan 2021 09:08:39 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/linked-list/linked-list/</guid>
-      <description>List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next </description>
+      <guid>blog.ahsort.com/algorithms/linked-list/linked-list/</guid>
+      <description>List Node class ListNode: def __init__(self, val = 0, next = None): self.val = val self.next = next  </description>
     </item>
     
     <item>
       <title>Missing Number</title>
-      <link>http://blog.ahsort.com/algorithms/array/missing-number/</link>
+      <link>blog.ahsort.com/algorithms/array/missing-number/</link>
       <pubDate>Thu, 07 Jan 2021 08:36:50 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/array/missing-number/</guid>
+      <guid>blog.ahsort.com/algorithms/array/missing-number/</guid>
       <description>Missing Number(LC268)  Given any array nums containing n distinct numbers in the range[0, n],return the only number in the range that is missing from the array.
  Math def solve_by_math(nums): ans = 0 for i, n in enumerate(nums): ans += i + 1 - n return ans def solve_by_bit(nums): ans = 0 for i, n in enumerate(nums): ans ^= i ^ n return ans def solve_by_set(nums): s = set(nums) for i in range(len(nums)): if i not in s: return i return len(nums) def solve_by_cycle(nums): i = 0 while i &amp;lt; len(nums): j = nums[i] if j &amp;lt; len(nums) and nums[j] !</description>
     </item>
     
     <item>
       <title>Edit Distance</title>
-      <link>http://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</link>
+      <link>blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</link>
       <pubDate>Mon, 04 Jan 2021 07:47:06 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</guid>
+      <guid>blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</guid>
       <description>One Edit Distance (bs32)  Given two string s and t determine whether they are one or zero edit distance away. An edit can be described as deleting a character, adding a character, or replacing a character with another character.
  def solve(s, t): m, n = len(s), len(t) if abs(m - n) &amp;gt; 1: return False if m == n: return sum(x != y for x, y in zip(s, t)) &amp;lt; 2 i = j = k = 0 while k &amp;lt; min(m, n): if s[i] !</description>
     </item>
     
     <item>
       <title>Longest Increasing Subsequence</title>
-      <link>http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</link>
+      <link>blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</link>
       <pubDate>Mon, 04 Jan 2021 07:36:57 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</guid>
+      <guid>blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</guid>
       <description>Longest Increasing Subsequence (lc300)  Given an integer array nums, return the length of the longest strictly increasing subsequence.
 A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7]
- def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &amp;lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp) def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans </description>
+ def solve(nums): if not nums: return 0 dp = [1 for _ in nums] for i range(1, len(nums)): for j in range(i): if nums[j] &amp;lt; nums[i]: dp[j] = max(dp[i], 1 + dp[j]) return max(dp)  def solve(nums): dp = [0 for _ in nums] ans = 0 for x in nums: i = bisect_left(dp, x, hi=ans) dp[i] = x if ans == i: ans += 1 return ans  </description>
     </item>
     
     <item>
       <title>Longest Common Subsequence</title>
-      <link>http://blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</link>
+      <link>blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</link>
       <pubDate>Mon, 04 Jan 2021 07:36:43 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</guid>
-      <description>Longest Common Subsequence (lc1143)  Given two strings s and t, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, &amp;ldquo;ace&amp;rdquo; is a subsequence of &amp;ldquo;abcde&amp;rdquo; while &amp;ldquo;aec&amp;rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings.</description>
+      <guid>blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</guid>
+      <description>Longest Common Subsequence (lc1143)  Given two strings s and t, return the length of their longest common subsequence. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters. (eg, &amp;ldquo;ace&amp;rdquo; is a subsequence of &amp;ldquo;abcde&amp;rdquo; while &amp;ldquo;aec&amp;rdquo; is not). A common subsequence of two strings is a subsequence that is common to both strings. If there is no common subsequence, return 0.</description>
     </item>
     
     <item>
       <title>2021 January Week 1</title>
-      <link>http://blog.ahsort.com/algorithms/challege/2021-january-week-1/</link>
+      <link>blog.ahsort.com/algorithms/challege/2021-january-week-1/</link>
       <pubDate>Sun, 03 Jan 2021 18:05:23 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/2021-january-week-1/</guid>
+      <guid>blog.ahsort.com/algorithms/challege/2021-january-week-1/</guid>
       <description>Check Array Formation Through Concatenation (LC1640)  Given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].
-Return true *if it is possible to form the array arr from pieces. Otherwise, return false.</description>
+Return true *if it is possible to form the array arr from pieces. Otherwise, return false.
+ Intuition Because the arr&amp;rsquo;s integers and the pieces&#39; integers are distinct, we can sort the integers of the pieces with the index of the arr&amp;rsquo;s integers.</description>
     </item>
     
     <item>
       <title>Weekly Contest 222</title>
-      <link>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</link>
+      <link>blog.ahsort.com/algorithms/contest/weekly-contest-222/</link>
       <pubDate>Sun, 03 Jan 2021 13:12:10 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/challege/weekly-contest-222/</guid>
+      <guid>blog.ahsort.com/algorithms/contest/weekly-contest-222/</guid>
       <description>1710. Maximum Units on a Truck (LC1710)  You are assigned to put some amount of boxes onto one truck. You are give a 2D array boxTypes, where boxTypes[i] = [numberOfBoxes[i], numberOfUnitsPerBox[i]] Return the maximum total number of units that can be put on the truck.
- def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans 1711.</description>
+ def solve(boxes, truck): boxes.sort(key=lambda x: -x[1]) ans = 0 for s, t in boxes: if truck &amp;lt;= s: return ans + truck * t ans += pick * t truck -= pick return ans  1711.</description>
     </item>
     
     <item>
       <title>Trie</title>
-      <link>http://blog.ahsort.com/algorithms/trie/trie/</link>
+      <link>blog.ahsort.com/algorithms/trie/trie/</link>
       <pubDate>Sun, 03 Jan 2021 09:34:58 +0800</pubDate>
       
-      <guid>http://blog.ahsort.com/algorithms/trie/trie/</guid>
-      <description>class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord(&amp;#39;a&amp;#39;) if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord(&amp;#39;a&amp;#39;) node = node.</description>
+      <guid>blog.ahsort.com/algorithms/trie/trie/</guid>
+      <description>class LetterTrieNode: def __init__(self): self.children = [None] * 26 self.word = False class Dict: def __init__(self): self.root = LetterTrieNode() def add(self, word): node = self.root for c in word: i = ord(c) - ord(&#39;a&#39;) if not node.children[i]: node.children[i] = LetterTrieNode() node = node.children[i] node.word = True def has(self, word): node = self._node(word) return node and node.word def startswith(self, prefix): return self._node(word) is not None def _node(self, word): node = self.root for c in prefix: i = ord(c) - ord(&#39;a&#39;) node = node.</description>
     </item>
     
   </channel>
