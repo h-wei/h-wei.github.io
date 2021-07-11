@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AH~ sort</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2021-07-10T23:12:35&#43;08:00</updated>
+    <updated>2021-07-11T19:35:36&#43;08:00</updated>
     <id>https://blog.ahsort.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.ahsort.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.ahsort.com/atom.xml" />
@@ -17,10 +17,319 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.84.0">Hugo</generator>
         <entry>
+            <title type="text">Best Time to Buy and Sell Stock with Cooldown</title>
+            <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/11/best-time-to-buy-and-sell-stock-with-cooldown/" />
+            <id>https://blog.ahsort.com/algorithms/2021/07/11/best-time-to-buy-and-sell-stock-with-cooldown/</id>
+            <updated>2021-07-11T19:24:47&#43;08:00</updated>
+            <published>2021-07-11T19:09:06&#43;08:00</published>
+            <author>
+                    <name>Putao</name>
+                    <uri>https://blog.ahsort.com/</uri>
+                    <email>h.wei@outlook.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Best Time to Buy and Sell Stock with Cooldown, LC309 You are given an array prices where prices[i] is the price of a given stock on the ith day.
+Find the maximum profit you can achieve. You may complete as many transactions as you like (i.</summary>
+            
+                <content type="html">&lt;h2 id=&#34;best-time-to-buy-and-sell-stock-with-cooldown-lc309httpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-with-cooldown&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/&#34;&gt;Best Time to Buy and Sell Stock with Cooldown, LC309&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You are given an array &lt;code&gt;prices&lt;/code&gt; where &lt;code&gt;prices[i]&lt;/code&gt; is the price of a given stock on the &lt;code&gt;ith&lt;/code&gt; day.&lt;/p&gt;
+&lt;p&gt;Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times) with the following restrictions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).&lt;/p&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= prices.length &amp;lt;= 5000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= prices[i] &amp;lt;= 1000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: prices = [1,2,3,0,2]; Output: 3&lt;/li&gt;
+&lt;li&gt;Input: prices = [1]; Output: 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution:&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;max_profit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cool&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cool&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;best-time-to-buy-and-sell-stock-with-transaction-fee-lc714httpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/&#34;&gt;Best Time to Buy and Sell Stock with Transaction Fee, LC714&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You are given an array &lt;code&gt;prices&lt;/code&gt; where &lt;code&gt;prices[i]&lt;/code&gt; is the price of a given stock on the &lt;code&gt;ith&lt;/code&gt; day, and an integer &lt;code&gt;fee&lt;/code&gt; representing a transaction fee.&lt;/p&gt;
+&lt;p&gt;Find the maximum profit you can achieve. You may complete as many transactions as you like, but you need to pay the transaction fee for each sell.&lt;/p&gt;
+&lt;p&gt;Note: you may not engage in multiple transactions simultaneously.&lt;/p&gt;
+&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= prices.length &amp;lt;= 5 * 10**4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= prices[i] &amp;lt; 5 * 10**4&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: prices = [1,3,2,8,4,9], fee = 2; Output: 8&lt;/li&gt;
+&lt;li&gt;Input: prices = [1,3,7,5,10,3], fee = 3; Output: 6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution-1&#34;&gt;Solution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;max_profit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sell&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/algorithms/" term="Algorithms" label="Algorithms" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/leetcode/" term="LeetCode" label="LeetCode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">H Index</title>
+            <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/11/h-index/" />
+            <id>https://blog.ahsort.com/algorithms/2021/07/11/h-index/</id>
+            <updated>2021-07-11T19:08:30&#43;08:00</updated>
+            <published>2021-07-11T19:01:54&#43;08:00</published>
+            <author>
+                    <name>Putao</name>
+                    <uri>https://blog.ahsort.com/</uri>
+                    <email>h.wei@outlook.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">H-Index, LC274 Given an array of integers citations where citations[i] is the number of citations a researcher received for their ith paper, return compute the researcher&amp;rsquo;s h-index.
+According to the definition of h-index on Wikipedia: A scientist has an index h if h of their n papers have at least h citations each, and the other n-h papers have no more than h citations each.</summary>
+            
+                <content type="html">&lt;h2 id=&#34;h-index-lc274httpsleetcodecomproblemsh-index&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/h-index/&#34;&gt;H-Index, LC274&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Given an array of integers &lt;code&gt;citations&lt;/code&gt; where &lt;code&gt;citations[i]&lt;/code&gt; is the number of citations a researcher received for their &lt;code&gt;ith&lt;/code&gt; paper, return compute the researcher&amp;rsquo;s h-index.&lt;/p&gt;
+&lt;p&gt;According to the &lt;a href=&#34;https://en.wikipedia.org/wiki/H-index&#34;&gt;definition of h-index on Wikipedia&lt;/a&gt;: A scientist has an index &lt;code&gt;h&lt;/code&gt; if &lt;code&gt;h&lt;/code&gt; of their &lt;code&gt;n&lt;/code&gt; papers have at least &lt;code&gt;h&lt;/code&gt; citations each, and the other &lt;code&gt;n-h&lt;/code&gt; papers have no more than &lt;code&gt;h&lt;/code&gt; citations each.&lt;/p&gt;
+&lt;p&gt;If there are several possible values for &lt;code&gt;h&lt;/code&gt;, the maximum one is taken as the h-index.&lt;/p&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= citations.length &amp;lt;= 5000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= citations[i] &amp;lt;= 1000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: citations = [3,0,6,1,5]; Output: 3&lt;/li&gt;
+&lt;li&gt;Input: citations = [1,3,1]; Output: 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution:&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;h_index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;citations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;sorted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;citations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)):&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;citations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/algorithms/" term="Algorithms" label="Algorithms" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/leetcode/" term="LeetCode" label="LeetCode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/sort/" term="Sort" label="Sort" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Find Median From Data Stream</title>
+            <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/11/find-median-from-data-stream/" />
+            <id>https://blog.ahsort.com/algorithms/2021/07/11/find-median-from-data-stream/</id>
+            <updated>2021-07-11T19:01:10&#43;08:00</updated>
+            <published>2021-07-11T18:48:32&#43;08:00</published>
+            <author>
+                    <name>Putao</name>
+                    <uri>https://blog.ahsort.com/</uri>
+                    <email>h.wei@outlook.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Find Median From Data Stream, LC295 The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and the median is the mean of the two middle values.
+Implement the MedianFinder class:</summary>
+            
+                <content type="html">&lt;h2 id=&#34;find-median-from-data-stream-lc295httpsleetcodecomproblemsfind-median-from-data-stream&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/find-median-from-data-stream/&#34;&gt;Find Median From Data Stream, LC295&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and the median is the mean of the two middle values.&lt;/p&gt;
+&lt;p&gt;Implement the MedianFinder class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MedianFinder()&lt;/code&gt; initializes the &lt;code&gt;MedianFinder&lt;/code&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void addNum(int num)&lt;/code&gt; adds the integer &lt;code&gt;num&lt;/code&gt; from the data stream to the data structure&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;double findMedian()&lt;/code&gt; returns the median of all elements so far.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-10**5 &amp;lt;= num &amp;lt;= 10**5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;There will be at least one element in the data structure before calling &lt;code&gt;findMedian&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;At most &lt;code&gt;5 * 10**4&lt;/code&gt; calls will be made to &lt;code&gt;addNum&lt;/code&gt; and &lt;code&gt;findMedian&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: [&amp;ldquo;MedianFinder&amp;rdquo;, &amp;ldquo;addNum&amp;rdquo;, &amp;ldquo;addNum&amp;rdquo;, &amp;ldquo;findMedian&amp;rdquo;, &amp;ldquo;addNum&amp;rdquo;, &amp;ldquo;findMedian&amp;rdquo;] [[],[1],[2],[],[3],[]]; Output: [null, null, null, 1.5, null, 2.0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MedianFinder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;heappush&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;heappushpop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;heappush&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;heappushpop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;median&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/algorithms/" term="Algorithms" label="Algorithms" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/leetcode/" term="LeetCode" label="LeetCode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/heap/" term="Heap" label="Heap" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">Time Based Key Value Store</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/time-based-key-value-store/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/time-based-key-value-store/</id>
-            <updated>2021-07-10T23:12:14&#43;08:00</updated>
+            <updated>2021-07-11T19:28:51&#43;08:00</updated>
             <published>2021-07-10T22:50:49&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -39,7 +348,7 @@ Implement the TimeMap class:
 &lt;li&gt;&lt;code&gt;void set(String key, String value, int timestamp)&lt;/code&gt; Stores the key &lt;code&gt;key&lt;/code&gt; with the value &lt;code&gt;value&lt;/code&gt; at the given time &lt;code&gt;timestamp&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;String get(String key, String value)&lt;/code&gt; Returns a value such that &lt;code&gt;set&lt;/code&gt; was called previously, with &lt;code&gt;timestamp_prev &amp;lt;= timestamp&lt;/code&gt;. If there are multiple such values, it returns the value associated with the largest &lt;code&gt;timestamp_prev&lt;/code&gt;. If there are no values, it returns &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= key.length, value.length &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;key&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt; consist of lowercase English letters and digits.&lt;/li&gt;
@@ -47,7 +356,7 @@ Implement the TimeMap class:
 &lt;li&gt;All the timestamps &lt;code&gt;timestamp&lt;/code&gt; of &lt;code&gt;set&lt;/code&gt; are strictly increasing.&lt;/li&gt;
 &lt;li&gt;At most &lt;code&gt;2 * 10**5&lt;/code&gt; calls will be made to &lt;code&gt;set&lt;/code&gt; and &lt;code&gt;get&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;solution&#34;&gt;Solution:&lt;/h3&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -132,26 +441,26 @@ Implement the TimeMap class:
             <title type="text">Best Sightseeing Pair</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/best-sightseeing-pair/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/best-sightseeing-pair/</id>
-            <updated>2021-07-10T22:48:45&#43;08:00</updated>
+            <updated>2021-07-11T19:27:40&#43;08:00</updated>
             <published>2021-07-10T22:33:01&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Best Sightseeing Pair, LC 1014 You are given an integer array values where values[i] represents the value of the ith sightseeing spot. Two sightseeing spots i and j . have a distance j-i between them.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Best Sightseeing Pair, LC1014 You are given an integer array values where values[i] represents the value of the ith sightseeing spot. Two sightseeing spots i and j . have a distance j-i between them.
 The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j] + i - j: the sum of the values of the sightseeing spots, minus the distance between them</summary>
             
-                <content type="html">&lt;h2 id=&#34;best-sightseeing-pair-lc-1014httpsleetcodecomproblemsbest-sightseeing-pair&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/best-sightseeing-pair/&#34;&gt;Best Sightseeing Pair, LC 1014&lt;/a&gt;&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;best-sightseeing-pair-lc1014httpsleetcodecomproblemsbest-sightseeing-pair&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/best-sightseeing-pair/&#34;&gt;Best Sightseeing Pair, LC1014&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;You are given an integer array &lt;code&gt;values&lt;/code&gt; where values[i] represents the value of the &lt;code&gt;ith&lt;/code&gt; sightseeing spot. Two sightseeing spots &lt;code&gt;i&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; . have a distance &lt;code&gt;j-i&lt;/code&gt; between them.&lt;/p&gt;
 &lt;p&gt;The score of a pair (&lt;code&gt;i &amp;lt; j&lt;/code&gt;) of sightseeing spots is &lt;code&gt;values[i] + values[j] + i - j&lt;/code&gt;: the sum of the values of the sightseeing spots, minus the distance between them&lt;/p&gt;
 &lt;p&gt;Return the maximum score of a pair of sightseeing spots.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;2 &amp;lt;= values.length &amp;lt;= 5 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= values[i] &amp;lt;= 1000&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: values = [8,1,5,2,6]; Output: 11&lt;/li&gt;
@@ -170,10 +479,10 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;best_sightseeing_pair&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;upper&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;upper&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;upper&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;upper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -181,12 +490,12 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
 &lt;p&gt;You are given an array &lt;code&gt;prices&lt;/code&gt; where &lt;code&gt;pairs[i]&lt;/code&gt; is the price of a given stock on the &lt;code&gt;ith&lt;/code&gt; day.&lt;/p&gt;
 &lt;p&gt;You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.&lt;/p&gt;
 &lt;p&gt;Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= prices.length &amp;lt;= 10**5&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;0 &amp;lt;= prices[i] &amp;lt;= 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;examples&#34;&gt;Examples:&lt;/h3&gt;
+&lt;h3 id=&#34;examples-1&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: prices = [7,1,5,3,6,4]; Output: 5&lt;/li&gt;
@@ -216,12 +525,12 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
 &lt;p&gt;You are given an array &lt;code&gt;prices&lt;/code&gt; where &lt;code&gt;prices[i]&lt;/code&gt; is the price of a given stock on the &lt;code&gt;ith&lt;/code&gt; day.&lt;/p&gt;
 &lt;p&gt;Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e. buy one and sell one share of the stock multiple times)&lt;/p&gt;
 &lt;p&gt;Note: You may not engage in multiple transactions simultaneously  (i.e., you must sell the stock before you buy again)&lt;/p&gt;
-&lt;h3 id=&#34;constraints-2&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints-2&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= prices.length &amp;lt;= 3 * 10**5&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;0 &amp;lt;= prices[i] &amp;lt;= 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;examples-1&#34;&gt;Examples:&lt;/h3&gt;
+&lt;h3 id=&#34;examples-2&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: prices = [7,1,5,3,6,4]; Output: 7&lt;/li&gt;
@@ -293,7 +602,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
             <title type="text">Decode Ways</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/decode-ways/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/decode-ways/</id>
-            <updated>2021-07-10T22:32:09&#43;08:00</updated>
+            <updated>2021-07-11T19:28:26&#43;08:00</updated>
             <published>2021-07-10T22:01:15&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -319,12 +628,12 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
 &lt;p&gt;Note that the grouping (&lt;code&gt;1 11 06&lt;/code&gt;) is invalid because &lt;code&gt;&amp;quot;06&amp;quot;&lt;/code&gt; cannot be mapped into &lt;code&gt;&#39;F&#39;&lt;/code&gt; since &lt;code&gt;&amp;quot;6&amp;quot;&lt;/code&gt; is different from &lt;code&gt;&amp;quot;06&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Given a string &lt;code&gt;s&lt;/code&gt; containing only digits, return the number of ways to decode it.&lt;/p&gt;
 &lt;p&gt;The answer is guaranteed to fit in a 32-bit integer.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= s.length &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; contains only digits and may contain leading zero(s).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: s = &amp;ldquo;226&amp;rdquo;; Output: 3&lt;/li&gt;
@@ -385,12 +694,12 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
 &lt;p&gt;Following up:&lt;/p&gt;
 &lt;p&gt;In addition to the mapping &lt;a href=&#34;https://blog.ahsort.com/algorithms/2021/07/10/decode-ways/#decode-ways-lc91&#34;&gt;above&lt;/a&gt;, an encoded message may contain the  &lt;code&gt;&#39;*&#39;&lt;/code&gt; character, which can represent any digit from &lt;code&gt;&#39;1&#39;&lt;/code&gt; to &lt;code&gt;&#39;9&#39;&lt;/code&gt; (&lt;code&gt;&#39;0&#39;&lt;/code&gt; is excluded).&lt;/p&gt;
 &lt;p&gt;Since the answer may be very large, return it modulo &lt;code&gt;10**9 + 7&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= s.length &amp;lt; 10**5&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;s[i]&lt;/code&gt; is a digit or &lt;code&gt;&#39;*&#39;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;examples&#34;&gt;Examples:&lt;/h3&gt;
+&lt;h3 id=&#34;examples-1&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: s = &amp;ldquo;*&amp;quot;; Output: 9&lt;/li&gt;
@@ -491,7 +800,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
             <title type="text">Majority Element</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/majority-element/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/majority-element/</id>
-            <updated>2021-07-09T16:30:23&#43;08:00</updated>
+            <updated>2021-07-11T19:29:40&#43;08:00</updated>
             <published>2021-07-09T16:17:37&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -500,7 +809,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC169 Given an array nums of size n, return the majority element, otherwise, return -1.
 The majority element is the element that appears more the n//2 times
-Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i] &amp;lt;= 2**31 + 1  Example   Input: nums = [3,2,3]; Output: 3 Input: nums = [1,2,3]; Output: -1   Solution 1 2 3 4 5 6  def majority_element(nums: List[int]) -&amp;gt; int: n, count = len(nums), Counter(nums) for k, v in count.</summary>
+Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i] &amp;lt;= 2**31 + 1  Examples   Input: nums = [3,2,3]; Output: 3 Input: nums = [1,2,3]; Output: -1   Solution 1 2 3 4 5 6  def majority_element(nums: List[int]) -&amp;gt; int: n, count = len(nums), Counter(nums) for k, v in count.</summary>
             
                 <content type="html">&lt;h2 id=&#34;problem-lc169httpsleetcodecomproblemsmajority-element&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/majority-element/&#34;&gt;Problem, LC169&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; of size &lt;code&gt;n&lt;/code&gt;, return the majority element, otherwise, return -1.&lt;/p&gt;
@@ -510,7 +819,7 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-2**31 &amp;lt;= nums[i] &amp;lt;= 2**31 + 1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [3,2,3]; Output: 3&lt;/li&gt;
@@ -596,25 +905,25 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i
             <title type="text">Longest Increasing Subsequence</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/longest-increasing-subsequence/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/longest-increasing-subsequence/</id>
-            <updated>2021-07-09T15:36:21&#43;08:00</updated>
+            <updated>2021-07-11T19:29:25&#43;08:00</updated>
             <published>2021-07-09T15:30:58&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC Given an integer array nums, return the length of the longest strcitly increasing subsequence.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC Given an integer array nums, return the length of the longest strictly increasing subsequence.
 A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements, For example, [3,6.</summary>
             
                 <content type="html">&lt;h2 id=&#34;problem-lc&#34;&gt;&lt;a href=&#34;&#34;&gt;Problem, LC&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, return the length of the longest strcitly increasing subsequence.&lt;/p&gt;
+&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, return the length of the longest strictly increasing subsequence.&lt;/p&gt;
 &lt;p&gt;A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements, For example, &lt;code&gt;[3,6.2.7]&lt;/code&gt; is a subsequence of the array &lt;code&gt;[0,3,1,6,2,2,7]&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 2500&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-10**4 &amp;lt;= nums[i] &amp;lt;= 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [10,9,2,5,3,7,101,18]; Output: 4&lt;/li&gt;
@@ -692,28 +1001,28 @@ A subsequence is a sequence that can be derived from an array by deleting some o
             <title type="text">Maximum Product Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/maximum-product-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/maximum-product-subarray/</id>
-            <updated>2021-07-09T09:44:40&#43;08:00</updated>
+            <updated>2021-07-11T19:30:26&#43;08:00</updated>
             <published>2021-07-09T09:29:30&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Maximum Product Subarray, LC152 Given an integer array nums, find a contiguous non-empty subarray within the array that has the largets product, and return the product.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Maximum Product Subarray, LC152 Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product.
 It is guaranteed that the answer will fit in a 32-bit integer.
 A subarray is a contiguous subsequence of the array.</summary>
             
                 <content type="html">&lt;h2 id=&#34;maximum-product-subarray-lc152httpsleetcodecomproblemsmaximum-product-subarray&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/maximum-product-subarray/&#34;&gt;Maximum Product Subarray, LC152&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, find a contiguous non-empty subarray within the array that has the largets product, and return the product.&lt;/p&gt;
+&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, find a contiguous non-empty subarray within the array that has the largest product, and return the product.&lt;/p&gt;
 &lt;p&gt;It is guaranteed that the answer will fit in a 32-bit integer.&lt;/p&gt;
 &lt;p&gt;A subarray is a contiguous subsequence of the array.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 2 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-10 &amp;lt;= nums[i] &amp;lt;= 10&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;The product of any prefix or suffix of &lt;code&gt;nums&lt;/code&gt; is guaranteed to fit in a 32-bit integer.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [2,3,-2,4]; Output: 6&lt;/li&gt;
@@ -751,7 +1060,7 @@ A subarray is a contiguous subsequence of the array.</summary>
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 10**5&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-10**9 &amp;lt;= nums[i] &amp;lt;= 10**9&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;examples-1&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [1,2,3]; Output: 3&lt;/li&gt;
@@ -829,24 +1138,24 @@ A subarray is a contiguous subsequence of the array.</summary>
             <title type="text">Maximum Length of Repeated Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/maximum-length-of-repeated-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/maximum-length-of-repeated-subarray/</id>
-            <updated>2021-07-08T21:32:50&#43;08:00</updated>
+            <updated>2021-07-11T19:32:05&#43;08:00</updated>
             <published>2021-07-08T21:21:48&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC718 Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays
-Constraints:  1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000 0 &amp;lt;= nums1[i], nums2[i] &amp;lt;= 100  Example:   Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]; Output: 3 Input: nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]; Output: 5   Solution 1 2 3 4 5 6 7 8 9 10  def max_length_repeated_subarray(nums1: List[int], nums2: List[int]) -&amp;gt; int: m, n = len(nums1) + 1, len(nums2) + 1 f = [[0] * n for _ in range(m)] result = 0 for i in range(1, m): for j in range(1, n): if nums1[i-1] == nums2[j-1]: f[i][j] = 1 + f[i-1][j-1] result = max(result, f[i][j]) return result   </summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Maximum Length of Repeated Subarray, LC718 Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays
+Constraints  1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000 0 &amp;lt;= nums1[i], nums2[i] &amp;lt;= 100  Examples   Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]; Output: 3 Input: nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]; Output: 5   Solution 1 2 3 4 5 6 7 8 9 10  def max_length_repeated_subarray(nums1: List[int], nums2: List[int]) -&amp;gt; int: m, n = len(nums1) + 1, len(nums2) + 1 f = [[0] * n for _ in range(m)] result = 0 for i in range(1, m): for j in range(1, n): if nums1[i-1] == nums2[j-1]: f[i][j] = 1 + f[i-1][j-1] result = max(result, f[i][j]) return result   </summary>
             
-                <content type="html">&lt;h2 id=&#34;problem-lc718httpsleetcodecomproblemsmaximum-length-of-repeated-subarray&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/maximum-length-of-repeated-subarray/&#34;&gt;Problem, LC718&lt;/a&gt;&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;maximum-length-of-repeated-subarray-lc718httpsleetcodecomproblemsmaximum-length-of-repeated-subarray&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/maximum-length-of-repeated-subarray/&#34;&gt;Maximum Length of Repeated Subarray, LC718&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given two integer arrays &lt;code&gt;nums1&lt;/code&gt; and &lt;code&gt;nums2&lt;/code&gt;, return the maximum length of a subarray that appears in both arrays&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;0 &amp;lt;= nums1[i], nums2[i] &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]; Output: 3&lt;/li&gt;
@@ -917,30 +1226,30 @@ Constraints:  1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000 0 &amp;lt;= 
         </entry>
     
         <entry>
-            <title type="text">Binary Subarrays With Sum</title>
+            <title type="text">Binary Subarrays with Sum</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/binary-subarrays-with-sum/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/binary-subarrays-with-sum/</id>
-            <updated>2021-07-08T21:09:30&#43;08:00</updated>
+            <updated>2021-07-11T19:31:18&#43;08:00</updated>
             <published>2021-07-08T21:02:48&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC930 Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Binary Subarrays with Sum, LC930 Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.
 A subarray is a contiguous part of the array.
-Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 nums[i] is either 0 or 1 0 &amp;lt;= goal &amp;lt;= nums.</summary>
+Constraints  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 nums[i] is either 0 or 1 0 &amp;lt;= goal &amp;lt;= nums.</summary>
             
-                <content type="html">&lt;h2 id=&#34;problem-lc930httpsleetcodecomproblemsbinary-subarrays-with-sum&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/binary-subarrays-with-sum/&#34;&gt;Problem, LC930&lt;/a&gt;&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;binary-subarrays-with-sum-lc930httpsleetcodecomproblemsbinary-subarrays-with-sum&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/binary-subarrays-with-sum/&#34;&gt;Binary Subarrays with Sum, LC930&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given a binary array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;goal&lt;/code&gt;, return the number of non-empty subarrays with a sum goal.&lt;/p&gt;
 &lt;p&gt;A subarray is a contiguous part of the array.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;nums[i]&lt;/code&gt; is either &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;0 &amp;lt;= goal &amp;lt;= nums.length&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [1,0,1,0,1], goal = 2; Output: 4&lt;/li&gt;
@@ -1038,7 +1347,7 @@ Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 nums[i] is either 0 or
             <title type="text">Maximum Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/maximum-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/maximum-subarray/</id>
-            <updated>2021-07-08T20:34:15&#43;08:00</updated>
+            <updated>2021-07-11T19:33:46&#43;08:00</updated>
             <published>2021-07-08T20:23:49&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -1085,12 +1394,12 @@ Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 -10**5 &amp;lt;= nums[
 &lt;/div&gt;&lt;h2 id=&#34;maximum-sum-circular-subarray-lc918httpsleetcodecomproblemsmaximum-sum-circular-subarray&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/maximum-sum-circular-subarray/&#34;&gt;Maximum Sum Circular Subarray, LC918&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given a circular integer array &lt;code&gt;nums&lt;/code&gt; of length &lt;code&gt;n&lt;/code&gt;, return the maximum possible sum of a non-empty subarray of &lt;code&gt;nums&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A circular array means the end of the array connects to the beginning of the array.&lt;/p&gt;
-&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-3 * 10**4 &amp;lt;= nums[i] &amp;lt;= 3 * 10**4&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example-1&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: nums = [5,-3,5]; Output: 10&lt;/li&gt;
@@ -1168,27 +1477,27 @@ Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 -10**5 &amp;lt;= nums[
             <title type="text">Kth Smallest Element in a Sorted Matrix</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/07/kth-smallest-element-in-a-sorted-matrix/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/07/kth-smallest-element-in-a-sorted-matrix/</id>
-            <updated>2021-07-08T21:33:34&#43;08:00</updated>
+            <updated>2021-07-11T19:34:36&#43;08:00</updated>
             <published>2021-07-07T21:26:57&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC378 Given an n x n matrix where each of the rows and columns are sorted in ascending order, return the kth smallest element in the matrix.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Kth Smallest Element in a sorted matrix, LC378 Given an n x n matrix where each of the rows and columns are sorted in ascending order, return the kth smallest element in the matrix.
 Note that it is the kth smallest element in the sorted order, not the kth distinct element.</summary>
             
-                <content type="html">&lt;h2 id=&#34;problem-lc378httpsleetcodecomproblemskth-smallest-element-in-a-sorted-matrix&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/&#34;&gt;Problem, LC378&lt;/a&gt;&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;kth-smallest-element-in-a-sorted-matrix-lc378httpsleetcodecomproblemskth-smallest-element-in-a-sorted-matrix&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/&#34;&gt;Kth Smallest Element in a sorted matrix, LC378&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given an &lt;code&gt;n x n matrix&lt;/code&gt; where each of the rows and columns are sorted in ascending order, return the &lt;code&gt;kth&lt;/code&gt; smallest element in the matrix.&lt;/p&gt;
 &lt;p&gt;Note that it is the &lt;code&gt;kth&lt;/code&gt; smallest element in the sorted order, not the &lt;code&gt;kth&lt;/code&gt; distinct element.&lt;/p&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints:&lt;/h3&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= matrix.length, matrix[i].length &amp;lt;= 300&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-10**9 &amp;lt;= matrix[i][j] &amp;lt;= 10**9&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;All the rows and columns of &lt;code&gt;matrix&lt;/code&gt; are guaranteed to be sorted in non-decreasing order.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= k &amp;lt;= matrix.length * matrix[i].length&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Input: matrix = [[1,5,9],[10,11,13],[12,13,15]], k = 8; Output: 13&lt;/li&gt;
@@ -1245,18 +1554,18 @@ Note that it is the kth smallest element in the sorted order, not the kth distin
             <title type="text">Count Good Meals</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/07/count-good-meals/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/07/count-good-meals/</id>
-            <updated>2021-07-08T20:55:09&#43;08:00</updated>
+            <updated>2021-07-11T19:34:56&#43;08:00</updated>
             <published>2021-07-07T20:46:52&#43;08:00</published>
             <author>
                     <name>Putao</name>
                     <uri>https://blog.ahsort.com/</uri>
                     <email>h.wei@outlook.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Problem, LC1711 A good meal is a meal that contains exactly two different food items with a sum of deliciousness equal to a power of two.
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Count Good Meals, LC1711 A good meal is a meal that contains exactly two different food items with a sum of deliciousness equal to a power of two.
 You can pick any two different foods to make a good meal.
 Given an array of integers deliciousness where deliciousness[i] is the deliciousness of the ith item of food, return the number of different good meals you can make from this list modulo 10**9+7.</summary>
             
-                <content type="html">&lt;h2 id=&#34;problem-lc1711httpsleetcodecomproblemscount-good-meals&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/count-good-meals/&#34;&gt;Problem, LC1711&lt;/a&gt;&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;count-good-meals-lc1711httpsleetcodecomproblemscount-good-meals&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/count-good-meals/&#34;&gt;Count Good Meals, LC1711&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A good meal is a meal that contains exactly two different food items with a sum of deliciousness equal to a power of two.&lt;/p&gt;
 &lt;p&gt;You can pick any two different foods to make a good meal.&lt;/p&gt;
 &lt;p&gt;Given an array of integers &lt;code&gt;deliciousness&lt;/code&gt; where &lt;code&gt;deliciousness[i]&lt;/code&gt; is the deliciousness of the &lt;code&gt;ith&lt;/code&gt; item of food, return the number of different good meals you can make from this list modulo &lt;code&gt;10**9+7&lt;/code&gt;.&lt;/p&gt;
