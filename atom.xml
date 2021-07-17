@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AH~ sort</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2021-07-16T16:50:26&#43;08:00</updated>
+    <updated>2021-07-17T19:27:36&#43;08:00</updated>
     <id>https://blog.ahsort.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.ahsort.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.ahsort.com/atom.xml" />
@@ -15,7 +15,299 @@
                 <email>h.wei@outlook.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
-    <generator uri="https://gohugo.io/" version="0.84.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.85.0">Hugo</generator>
+        <entry>
+            <title type="text">Three Equal Parts</title>
+            <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/17/three-equal-parts/" />
+            <id>https://blog.ahsort.com/algorithms/2021/07/17/three-equal-parts/</id>
+            <updated>2021-07-17T19:26:20&#43;08:00</updated>
+            <published>2021-07-17T18:57:41&#43;08:00</published>
+            <author>
+                    <name>Putao</name>
+                    <uri>https://blog.ahsort.com/</uri>
+                    <email>h.wei@outlook.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Three Equal Parts, LC927 You are given an array arr which consists of only zeros and ones, divide the array into three non-empty parts such that all of these parts represent the same binary value.
+If it is possible, return any [i, j] with i+1 &amp;lt; j, such that:</summary>
+            
+                <content type="html">&lt;h2 id=&#34;three-equal-parts-lc927httpsleetcodecomproblemsthree-equal-parts&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/three-equal-parts/&#34;&gt;Three Equal Parts, LC927&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You are given an array &lt;code&gt;arr&lt;/code&gt; which consists of only zeros and ones, divide the array into three non-empty parts such that all of these parts represent the same binary value.&lt;/p&gt;
+&lt;p&gt;If it is possible, return any &lt;code&gt;[i, j]&lt;/code&gt; with &lt;code&gt;i+1 &amp;lt; j&lt;/code&gt;, such that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;arr[0:i+1]&lt;/code&gt; is the first part,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arr[i+1:j]&lt;/code&gt; is the second part,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arr[j:]&lt;/code&gt; is the third part&lt;/li&gt;
+&lt;li&gt;All three parts have equal binary values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If it is not possible, return &lt;code&gt;[-1,-1]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note that the entire part is used when considering what binary value it represents. For example, &lt;code&gt;[1,1,0]&lt;/code&gt; represents &lt;code&gt;6&lt;/code&gt; in decimal, not &lt;code&gt;3&lt;/code&gt;. Also, leading zeros are allowed, so &lt;code&gt;[0,1,1]&lt;/code&gt; and &lt;code&gt;[1,1]&lt;/code&gt; represent the same value.&lt;/p&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;3 &amp;lt;= arr.length &amp;lt;= 3* 10**4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arr[i]&lt;/code&gt; is &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: arr = [1,0,1,0,1]; Output: [0,3]&lt;/li&gt;
+&lt;li&gt;Input: arr = [0,0,0,0,0]; Output: [0,4]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;three_equal_parts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rem&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;divmod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    
+    &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ones&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;third&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/algorithms/" term="Algorithms" label="Algorithms" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/leetcode/" term="LeetCode" label="LeetCode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/iterate/" term="Iterate" label="Iterate" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Matrix Block Sum</title>
+            <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/17/matrix-block-sum/" />
+            <id>https://blog.ahsort.com/algorithms/2021/07/17/matrix-block-sum/</id>
+            <updated>2021-07-17T18:46:18&#43;08:00</updated>
+            <published>2021-07-17T18:09:36&#43;08:00</published>
+            <author>
+                    <name>Putao</name>
+                    <uri>https://blog.ahsort.com/</uri>
+                    <email>h.wei@outlook.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Matrix Block Sum, LC1314 Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for:
+ i - k &amp;lt;= r &amp;lt;= i + k, j - k &amp;lt;= c &amp;lt;= j + k, and (r, c) is a valid position in the matrix.</summary>
+            
+                <content type="html">&lt;h2 id=&#34;matrix-block-sum-lc1314httpsleetcodecomproblemsmatrix-block-sum&#34;&gt;&lt;a href=&#34;https://leetcode.com/problems/matrix-block-sum/&#34;&gt;Matrix Block Sum, LC1314&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Given a &lt;code&gt;m x n&lt;/code&gt; matrix &lt;code&gt;mat&lt;/code&gt; and an integer &lt;code&gt;k&lt;/code&gt;, return a matrix &lt;code&gt;answer&lt;/code&gt; where each &lt;code&gt;answer[i][j]&lt;/code&gt; is the sum of all elements &lt;code&gt;mat[r][c]&lt;/code&gt; for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;i - k &amp;lt;= r &amp;lt;= i + k&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;j - k &amp;lt;= c &amp;lt;= j + k&lt;/code&gt;, and&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(r, c)&lt;/code&gt; is a valid position in the matrix.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= matrix.length, matrix[i].length, k &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= matrix[i][j] &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 1; Output: [[12,21,16],[27,45,33],[24,39,28]]&lt;/li&gt;
+&lt;li&gt;Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 2; Output: [[45,45,45],[45,45,45],[45,45,45]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;matrix_block_sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;y0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;range-sum-query-2d---immutable&#34;&gt;[Range Sum Query 2D - Immutable]&lt;/h2&gt;
+&lt;p&gt;Given a 2D matrix &lt;code&gt;matrix&lt;/code&gt;, handle multiple queries of the following type:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calculate the sum of the elements of &lt;code&gt;matrix&lt;/code&gt; inside the rectangle defined by  its upper left corner &lt;code&gt;(row1, col1)&lt;/code&gt; and lower right corner &lt;code&gt;(row2, col2)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Implement the NumMatrix class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;NumMatrix(int[][] matrix) Initializes the object with the integer matrix &lt;/code&gt;matrix`&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int sum_region(int row1, int col1, int row2, int col2)&lt;/code&gt; Returns the sum of the elements of matrix inside the rectangle defined by its upper left corner &lt;code&gt;(row1, col1)&lt;/code&gt; and lower right corner &lt;code&gt;(row2, col2)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constraints-1&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= matrix.length, matrix[i].length &amp;lt;= 200&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-10**5 &amp;lt;= matrix[i][j] &amp;lt;= 10**5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= row1 &amp;lt;= row2 &amp;lt;= m&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= col1 &amp;lt;= col2 &amp;lt;= n&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples-1&#34;&gt;Examples&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: [&amp;ldquo;NumMatrix&amp;rdquo;, &amp;ldquo;sum_region&amp;rdquo;, &amp;ldquo;sum_region&amp;rdquo;, &amp;ldquo;sum_region&amp;rdquo;] [[[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]]; Output: [null, 8, 11, 12]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution-1&#34;&gt;Solution&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;NumMatrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]):&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+                &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sum_region&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;row1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;col1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;col2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/algorithms/" term="Algorithms" label="Algorithms" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/categories/leetcode/" term="LeetCode" label="LeetCode" />
+                            
+                        
+                    
+                
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">4 Sum</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/16/4-sum/" />
@@ -172,7 +464,7 @@
             <title type="text">Minimum Falling Path Sum</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/16/minimum-falling-path-sum/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/16/minimum-falling-path-sum/</id>
-            <updated>2021-07-16T16:31:36&#43;08:00</updated>
+            <updated>2021-07-17T19:20:44&#43;08:00</updated>
             <published>2021-07-16T15:25:27&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -290,7 +582,7 @@ A falling path starts at any element in the first row and chooses the element in
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -642,7 +934,7 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 1000 0 &amp;lt;= nums[i] &amp;lt;
             <title type="text">Pascal’s Triangle</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/15/pascals-triangle/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/15/pascals-triangle/</id>
-            <updated>2021-07-16T15:05:56&#43;08:00</updated>
+            <updated>2021-07-17T19:20:31&#43;08:00</updated>
             <published>2021-07-15T14:06:10&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -771,7 +1063,7 @@ Constraints  1 &amp;lt;= numRows &amp;lt;= 30  Examples   Input: numRows = 5; Ou
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                             
@@ -789,7 +1081,7 @@ Constraints  1 &amp;lt;= numRows &amp;lt;= 30  Examples   Input: numRows = 5; Ou
             <title type="text">Ugly Number II</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/14/ugly-number-ii/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/14/ugly-number-ii/</id>
-            <updated>2021-07-14T21:43:52&#43;08:00</updated>
+            <updated>2021-07-17T19:20:23&#43;08:00</updated>
             <published>2021-07-14T21:29:21&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -906,7 +1198,7 @@ Constraints  1 &amp;lt;= n &amp;lt;= 1690  Examples   Input: n = 10; Output: 12 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -1540,7 +1832,7 @@ All occurrences of a character must be replaced with another character while pre
             <title type="text">Word Break</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/12/word-break/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/12/word-break/</id>
-            <updated>2021-07-13T17:57:26&#43;08:00</updated>
+            <updated>2021-07-17T19:20:04&#43;08:00</updated>
             <published>2021-07-12T21:14:06&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -1718,7 +2010,7 @@ Note that the same word in the dictionary may be reused multiple times in the se
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                             
@@ -1736,7 +2028,7 @@ Note that the same word in the dictionary may be reused multiple times in the se
             <title type="text">H Index II</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/12/h-index-ii/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/12/h-index-ii/</id>
-            <updated>2021-07-13T17:56:21&#43;08:00</updated>
+            <updated>2021-07-17T19:19:51&#43;08:00</updated>
             <published>2021-07-12T21:00:44&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -1823,13 +2115,13 @@ If there are several possible values for h, the maximum one is taken as the h-in
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/two-pointer/" term="Two Pointer" label="Two Pointer" />
+                                <category scheme="https://blog.ahsort.com/tags/two-pointers/" term="Two Pointers" label="Two Pointers" />
                             
                         
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -1841,7 +2133,7 @@ If there are several possible values for h, the maximum one is taken as the h-in
             <title type="text">Best Time to Buy and Sell Stock with Cooldown</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/11/best-time-to-buy-and-sell-stock-with-cooldown/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/11/best-time-to-buy-and-sell-stock-with-cooldown/</id>
-            <updated>2021-07-11T19:24:47&#43;08:00</updated>
+            <updated>2021-07-17T19:19:35&#43;08:00</updated>
             <published>2021-07-11T19:09:06&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -1948,7 +2240,7 @@ Find the maximum profit you can achieve. You may complete as many transactions a
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -2150,7 +2442,7 @@ Implement the MedianFinder class:</summary>
             <title type="text">Time Based Key Value Store</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/time-based-key-value-store/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/time-based-key-value-store/</id>
-            <updated>2021-07-11T19:28:51&#43;08:00</updated>
+            <updated>2021-07-17T19:25:12&#43;08:00</updated>
             <published>2021-07-10T22:50:49&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2244,7 +2536,7 @@ Implement the TimeMap class:
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dict/" term="Dict" label="Dict" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                             
@@ -2262,7 +2554,7 @@ Implement the TimeMap class:
             <title type="text">Best Sightseeing Pair</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/best-sightseeing-pair/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/best-sightseeing-pair/</id>
-            <updated>2021-07-11T19:27:40&#43;08:00</updated>
+            <updated>2021-07-17T19:19:17&#43;08:00</updated>
             <published>2021-07-10T22:33:01&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2405,7 +2697,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                             
@@ -2423,7 +2715,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
             <title type="text">Decode Ways</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/10/decode-ways/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/10/decode-ways/</id>
-            <updated>2021-07-11T19:28:26&#43;08:00</updated>
+            <updated>2021-07-17T19:19:24&#43;08:00</updated>
             <published>2021-07-10T22:01:15&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2609,7 +2901,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -2621,7 +2913,7 @@ The score of a pair (i &amp;lt; j) of sightseeing spots is values[i] + values[j]
             <title type="text">Majority Element</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/majority-element/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/majority-element/</id>
-            <updated>2021-07-11T19:29:40&#43;08:00</updated>
+            <updated>2021-07-17T19:24:59&#43;08:00</updated>
             <published>2021-07-09T16:17:37&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2714,7 +3006,7 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/counter/" term="Counter" label="Counter" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                     
@@ -2726,7 +3018,7 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 5 * 10**4 -2**31 &amp;lt;= nums[i
             <title type="text">Longest Increasing Subsequence</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/longest-increasing-subsequence/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/longest-increasing-subsequence/</id>
-            <updated>2021-07-11T19:29:25&#43;08:00</updated>
+            <updated>2021-07-17T19:18:52&#43;08:00</updated>
             <published>2021-07-09T15:30:58&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2810,7 +3102,7 @@ A subsequence is a sequence that can be derived from an array by deleting some o
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -2822,7 +3114,7 @@ A subsequence is a sequence that can be derived from an array by deleting some o
             <title type="text">Maximum Product Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/09/maximum-product-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/09/maximum-product-subarray/</id>
-            <updated>2021-07-11T19:30:26&#43;08:00</updated>
+            <updated>2021-07-17T19:19:08&#43;08:00</updated>
             <published>2021-07-09T09:29:30&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -2947,7 +3239,7 @@ A subarray is a contiguous subsequence of the array.</summary>
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -2959,7 +3251,7 @@ A subarray is a contiguous subsequence of the array.</summary>
             <title type="text">Maximum Length of Repeated Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/maximum-length-of-repeated-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/maximum-length-of-repeated-subarray/</id>
-            <updated>2021-07-11T19:32:05&#43;08:00</updated>
+            <updated>2021-07-17T19:18:34&#43;08:00</updated>
             <published>2021-07-08T21:21:48&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3038,7 +3330,7 @@ Constraints  1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000 0 &amp;lt;= n
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -3050,7 +3342,7 @@ Constraints  1 &amp;lt;= nums1.length, nums2.length &amp;lt;= 1000 0 &amp;lt;= n
             <title type="text">Binary Subarrays with Sum</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/binary-subarrays-with-sum/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/binary-subarrays-with-sum/</id>
-            <updated>2021-07-11T19:31:18&#43;08:00</updated>
+            <updated>2021-07-17T19:24:44&#43;08:00</updated>
             <published>2021-07-08T21:02:48&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3150,13 +3442,13 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 nums[i] is either 0 or 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dict/" term="Dict" label="Dict" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/array/" term="Array" label="Array" />
+                                <category scheme="https://blog.ahsort.com/tags/iterate/" term="Iterate" label="Iterate" />
                             
                         
                     
@@ -3168,7 +3460,7 @@ Constraints  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 nums[i] is either 0 or 
             <title type="text">Maximum Subarray</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/08/maximum-subarray/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/08/maximum-subarray/</id>
-            <updated>2021-07-11T19:33:46&#43;08:00</updated>
+            <updated>2021-07-17T19:18:43&#43;08:00</updated>
             <published>2021-07-08T20:23:49&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3286,7 +3578,7 @@ Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 -10**5 &amp;lt;= nums[
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -3298,7 +3590,7 @@ Constraints:  1 &amp;lt;= nums.length &amp;lt;= 3 * 10**4 -10**5 &amp;lt;= nums[
             <title type="text">Kth Smallest Element in a Sorted Matrix</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/07/kth-smallest-element-in-a-sorted-matrix/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/07/kth-smallest-element-in-a-sorted-matrix/</id>
-            <updated>2021-07-11T19:34:36&#43;08:00</updated>
+            <updated>2021-07-17T19:24:27&#43;08:00</updated>
             <published>2021-07-07T21:26:57&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3363,7 +3655,7 @@ Note that it is the kth smallest element in the sorted order, not the kth distin
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/merge-sort/" term="Merge Sort" label="Merge Sort" />
+                                <category scheme="https://blog.ahsort.com/tags/sort/" term="Sort" label="Sort" />
                             
                         
                     
@@ -3375,7 +3667,7 @@ Note that it is the kth smallest element in the sorted order, not the kth distin
             <title type="text">Count Good Meals</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/07/count-good-meals/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/07/count-good-meals/</id>
-            <updated>2021-07-11T19:34:56&#43;08:00</updated>
+            <updated>2021-07-17T19:24:16&#43;08:00</updated>
             <published>2021-07-07T20:46:52&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3451,7 +3743,7 @@ Given an array of integers deliciousness where deliciousness[i] is the delicious
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dict/" term="Dict" label="Dict" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                     
@@ -3463,7 +3755,7 @@ Given an array of integers deliciousness where deliciousness[i] is the delicious
             <title type="text">Jump Game</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/07/jump-game/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/07/jump-game/</id>
-            <updated>2021-07-08T20:44:52&#43;08:00</updated>
+            <updated>2021-07-17T19:18:20&#43;08:00</updated>
             <published>2021-07-07T20:34:50&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3583,7 +3875,7 @@ Determine if you are able to reach the last index.</summary>
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -3595,7 +3887,7 @@ Determine if you are able to reach the last index.</summary>
             <title type="text">Reduce Array Size to the Half</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/06/reduce-array-size-to-the-half/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/06/reduce-array-size-to-the-half/</id>
-            <updated>2021-07-06T15:37:56&#43;08:00</updated>
+            <updated>2021-07-17T19:24:08&#43;08:00</updated>
             <published>2021-07-06T15:33:08&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3668,7 +3960,7 @@ Return the minimum size of the set so that at least half of the integers of the 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dict/" term="Dict" label="Dict" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                     
@@ -3680,7 +3972,7 @@ Return the minimum size of the set so that at least half of the integers of the 
             <title type="text">House Robber</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/06/house-robber/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/06/house-robber/</id>
-            <updated>2021-07-06T10:53:33&#43;08:00</updated>
+            <updated>2021-07-17T19:17:47&#43;08:00</updated>
             <published>2021-07-06T10:13:16&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3832,7 +4124,7 @@ Return the minimum size of the set so that at least half of the integers of the 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -3844,7 +4136,7 @@ Return the minimum size of the set so that at least half of the integers of the 
             <title type="text">Display Table of Food Orders in a Restaurant</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/06/display-table-of-food-orders-in-a-restaurant/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/06/display-table-of-food-orders-in-a-restaurant/</id>
-            <updated>2021-07-12T08:27:10&#43;08:00</updated>
+            <updated>2021-07-17T19:24:00&#43;08:00</updated>
             <published>2021-07-06T08:53:37&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -3935,7 +4227,7 @@ Return the minimum size of the set so that at least half of the integers of the 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dict/" term="Dict" label="Dict" />
+                                <category scheme="https://blog.ahsort.com/tags/map/" term="Map" label="Map" />
                             
                         
                             
@@ -3953,7 +4245,7 @@ Return the minimum size of the set so that at least half of the integers of the 
             <title type="text">Number of Atoms</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/05/number-of-atoms/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/05/number-of-atoms/</id>
-            <updated>2021-07-05T21:44:23&#43;08:00</updated>
+            <updated>2021-07-17T19:23:49&#43;08:00</updated>
             <published>2021-07-05T17:20:08&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4166,7 +4458,7 @@ The reshaped matrix should be filled with all the elements of the original matri
             <title type="text">Climbing Stairs</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/05/climbing-stairs/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/05/climbing-stairs/</id>
-            <updated>2021-07-05T11:18:35&#43;08:00</updated>
+            <updated>2021-07-17T19:17:23&#43;08:00</updated>
             <published>2021-07-05T09:07:47&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4289,7 +4581,7 @@ Constraints:  1 &amp;lt;= n &amp;lt;= 45  Example:   Input: n = 2; Output: 2 Inp
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -4301,7 +4593,7 @@ Constraints:  1 &amp;lt;= n &amp;lt;= 45  Example:   Input: n = 2; Output: 2 Inp
             <title type="text">Fibonacci Number</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/04/fibonacci-number/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/04/fibonacci-number/</id>
-            <updated>2021-07-04T21:12:02&#43;08:00</updated>
+            <updated>2021-07-17T19:17:04&#43;08:00</updated>
             <published>2021-07-04T21:02:33&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4404,7 +4696,7 @@ F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2), for n &amp;gt; 1 Given n, calculate 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                             
@@ -4422,7 +4714,7 @@ F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2), for n &amp;gt; 1 Given n, calculate 
             <title type="text">Count Vowels Permutation</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/04/count-vowels-permutation/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/04/count-vowels-permutation/</id>
-            <updated>2021-07-05T12:04:44&#43;08:00</updated>
+            <updated>2021-07-17T19:16:57&#43;08:00</updated>
             <published>2021-07-04T16:07:19&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4501,7 +4793,7 @@ F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2), for n &amp;gt; 1 Given n, calculate 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programing/" term="Dynamic Programing" label="Dynamic Programing" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                     
@@ -4611,7 +4903,7 @@ Range sum S(i, j) is defined as the sum of the elements in nums between indices 
             <title type="text">Set Mismatch</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/04/set-mismatch/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/04/set-mismatch/</id>
-            <updated>2021-07-04T07:54:52&#43;08:00</updated>
+            <updated>2021-07-17T19:17:15&#43;08:00</updated>
             <published>2021-07-04T07:51:37&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4672,6 +4964,14 @@ Range sum S(i, j) is defined as the sum of the elements in nums between indices 
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/set/" term="Set" label="Set" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -4680,7 +4980,7 @@ Range sum S(i, j) is defined as the sum of the elements in nums between indices 
             <title type="text">Distinct Coin Sums</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/02/distinct-coin-sums/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/02/distinct-coin-sums/</id>
-            <updated>2021-07-05T21:12:44&#43;08:00</updated>
+            <updated>2021-07-17T19:14:56&#43;08:00</updated>
             <published>2021-07-03T14:12:39&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -4772,7 +5072,7 @@ Range sum S(i, j) is defined as the sum of the elements in nums between indices 
                             
                             
                             
-                                <category scheme="https://blog.ahsort.com/tags/dynamic-programming/" term="Dynamic Programming" label="Dynamic Programming" />
+                                <category scheme="https://blog.ahsort.com/tags/dp/" term="DP" label="DP" />
                             
                         
                             
@@ -9582,7 +9882,7 @@ A set &lt;code&gt;x&lt;/code&gt; is a &lt;strong&gt;subset&lt;/strong&gt; of a s
             <title type="text">Distribute Candies</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/03/01/distribute-candies/" />
             <id>https://blog.ahsort.com/algorithms/2021/03/01/distribute-candies/</id>
-            <updated>2021-07-01T10:01:33&#43;08:00</updated>
+            <updated>2021-07-17T19:22:08&#43;08:00</updated>
             <published>2021-03-01T10:00:58&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -9735,7 +10035,7 @@ Intuition If there is a cycle in the linked list cycle, the fast pointer will me
             <title type="text">Trim a Binary Search Tree</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/02/02/trim-a-binary-search-tree/" />
             <id>https://blog.ahsort.com/algorithms/2021/02/02/trim-a-binary-search-tree/</id>
-            <updated>2021-07-01T10:07:32&#43;08:00</updated>
+            <updated>2021-07-17T19:21:58&#43;08:00</updated>
             <published>2021-02-02T10:06:58&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -9802,6 +10102,14 @@ if the value of a node is greater than &lt;code&gt;high&lt;/code&gt;, use the le
                         
                     
                 
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.ahsort.com/tags/dfs/" term="DFS" label="DFS" />
+                            
+                        
                     
                 
             
@@ -11423,7 +11731,7 @@ Output: 3&lt;/p&gt;
             <title type="text">Kth Missing Positive Number</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/01/06/kth-missing-positive-number/" />
             <id>https://blog.ahsort.com/algorithms/2021/01/06/kth-missing-positive-number/</id>
-            <updated>2021-07-03T14:08:31&#43;08:00</updated>
+            <updated>2021-07-17T19:21:25&#43;08:00</updated>
             <published>2021-01-06T13:28:40&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -11492,12 +11800,6 @@ Output: 9&lt;/p&gt;
                     
                 
                     
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.ahsort.com/tags/sorted/" term="Sorted" label="Sorted" />
-                            
                         
                             
                             
@@ -12785,7 +13087,7 @@ Then we join the sorted array and compare it.&lt;/p&gt;
             <title type="text">Find K Closest Elements</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/2021/07/02/find-k-closest-elements/" />
             <id>https://blog.ahsort.com/algorithms/2021/07/02/find-k-closest-elements/</id>
-            <updated>2021-07-03T14:24:33&#43;08:00</updated>
+            <updated>2021-07-17T19:15:16&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Putao</name>
@@ -12858,12 +13160,6 @@ An integer a is closer to x than an integer b if:</summary>
                     
                 
                     
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.ahsort.com/tags/sorted/" term="Sorted" label="Sorted" />
-                            
                         
                             
                             
