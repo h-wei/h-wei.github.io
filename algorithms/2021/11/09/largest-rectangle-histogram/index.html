@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.89.3" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -55,7 +55,7 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-11-09T16:50:11+08:00",
-        "dateModified": "2021-11-09T18:25:58+08:00",
+        "dateModified": "2021-11-30T09:01:42+08:00",
         "url": "https://blog.ahsort.com/algorithms/2021/11/09/largest-rectangle-histogram/",
         "headline": "Largest Rectangle Histogram",
         "description": "Largest Rectangle in Histogram, LC84 Given an array of integers heights representing the histogram’s bar height where the width of each bar is 1, return the area of the largest rectangle in the histogramm.\nConstraints:  type: list[int] size: 1 \u003c= heights.length \u003c= 10**5 range: 0 \u003c= heights[i] \u003c= 10**4  Example:  Input: heights = [2,1,5,6,2,3], Output: 10 Input: heights = [2,4], Output: 4 Input: heights = [2,1,2], Output: 3  Intuition For given bar i with value h, how to find the biggest rectangle, which is ending with this bar?",
@@ -105,7 +105,7 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://blog.ahsort.com/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-11-09T16:50:11&#43;08:00" />
-    <meta property="article:modified_time" content="2021-11-09T18:25:58&#43;08:00" />
+    <meta property="article:modified_time" content="2021-11-30T09:01:42&#43;08:00" />
     
     <meta property="article:section" content="algorithms" />
 
@@ -240,7 +240,7 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
     
     
         
-        <time datetime="2021-11-09T18:25:58&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.9</time>
+        <time datetime="2021-11-30T09:01:42&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.30</time>
     
     
     
@@ -305,7 +305,7 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
     <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">heights</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
-        <span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">items</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">h</span><span class="p">:</span>
+        <span class="k">while</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">items</span><span class="p">[</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">v</span><span class="p">:</span>
             <span class="n">h</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()]</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
         <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -400,9 +400,9 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2021-11-09 18:25:58 CST" style="cursor:help">
+        <span title="Updated @ 2021-11-30 09:01:42 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-11-09</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-11-09</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-11-30</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-11-30</text></g></svg>
         </span></div>
 
 
@@ -505,23 +505,23 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/algorithms/2021/12/25/basic-calculator/" class="related-link">Basic Calculator</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/algorithms/2021/12/23/repeated-dna-sequences/" class="related-link">Repeated Dna Sequences</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/algorithms/2021/11/26/number-of-provinces/" class="related-link">Number of Provinces</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/algorithms/2021/11/24/trapping-rain-water/" class="related-link">Trapping Rain Water</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/algorithms/2021/11/24/reconstruct-original-digits-from-english/" class="related-link">Reconstruct Original Digits From English</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/algorithms/2021/11/24/interval-list-intersections/" class="related-link">Interval List Intersections</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/algorithms/2021/11/20/find-minimum-in-rotated-array/" class="related-link">Find Minimum in Rotated Array</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/algorithms/2021/11/19/sliding-window-maximum/" class="related-link">Sliding Window Maximum</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/algorithms/2021/11/18/can-make-palindrome-from-substring/" class="related-link">Can Make Palindrome From Substring</a>
                     </li>
                 
             </ul>
@@ -581,7 +581,7 @@ Constraints:  type: list[int] size: 1 &lt;= heights.length &lt;= 10**5 range: 0 
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;1969–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Putao</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;1969–2022&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Putao</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     
