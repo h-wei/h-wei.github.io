@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AH~ sort</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2022-03-08T21:39:13&#43;08:00</updated>
+    <updated>2022-03-08T21:51:29&#43;08:00</updated>
     <id>https://blog.ahsort.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.ahsort.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.ahsort.com/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">001</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/dc/001/" />
             <id>https://blog.ahsort.com/algorithms/dc/001/</id>
-            <updated>2022-03-08T21:36:42&#43;08:00</updated>
+            <updated>2022-03-08T21:51:24&#43;08:00</updated>
             <published>2022-03-08T20:41:16&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -28,7 +28,7 @@
                     <email>h.wei@outlook.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Non-overlapping Intervals, LC 435, Medium Given an array of intervals where intervals[i] = [start_i, end_i], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
-Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length == 2 -5 * 10**4 &amp;lt;= start_i &amp;lt; end_i &amp;lt;= 5 * 10**4  Examples:  Input: intervals = [[1,2], [2,3], [3,4], [1,3]]; Output: 1 Input: intervals = [[1,2], [1,2], [1,2]]; Output: 2 Input: intervals = [[1,2], [2,3]]; Output: 0  Solution: 1 2 3 4 5 6 7 8 9 10  def non_overlappint_intervals(intervals: list[list[int]]) -&amp;gt; int: intervals.</summary>
+Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length == 2 -5 * 10**4 &amp;lt;= start_i &amp;lt; end_i &amp;lt;= 5 * 10**4  Examples:  Input: intervals = [[1,2], [2,3], [3,4], [1,3]]; Output: 1 Input: intervals = [[1,2], [1,2], [1,2]]; Output: 2 Input: intervals = [[1,2], [2,3]]; Output: 0  Intuition Sort by ending point</summary>
             
                 <content type="html">&lt;h2 id=&#34;non-overlapping-intervals-lc-435-mediumhttpsleetcode-cncomproblemsnon-overlapping-intervals&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/non-overlapping-intervals/&#34;&gt;Non-overlapping Intervals, LC 435, Medium&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Given an array of intervals where &lt;code&gt;intervals[i] = [start_i, end_i]&lt;/code&gt;, return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.&lt;/p&gt;
@@ -44,6 +44,8 @@ Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length =
 &lt;li&gt;Input: intervals = [[1,2], [1,2], [1,2]]; Output: 2&lt;/li&gt;
 &lt;li&gt;Input: intervals = [[1,2], [2,3]]; Output: 0&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;intuition&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Sort by ending point&lt;/p&gt;
 &lt;h3 id=&#34;solution&#34;&gt;Solution:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -87,6 +89,8 @@ Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length =
 &lt;li&gt;Input: points = [[1,2],[3,4],[5,6],[7,8]]; Output: 4&lt;/li&gt;
 &lt;li&gt;Input: points = [[1,2],[3,4],[2,3],[4,5]]; Output: 2&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;intuition-1&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Sort by ending point&lt;/p&gt;
 &lt;h3 id=&#34;solution-1&#34;&gt;Solution&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -130,6 +134,8 @@ Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length =
 &lt;li&gt;Input: nums = [1,2,2,2,5,0]; Output: 3&lt;/li&gt;
 &lt;li&gt;Input: nums = [3,2,1]; Output: 0&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;intuition-2&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Binary search for prefix sum&lt;/p&gt;
 &lt;h3 id=&#34;solution-2&#34;&gt;Solution:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -184,6 +190,8 @@ Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length =
 &lt;li&gt;Input: target = [5,1,3], arr = [9,4,2,3,4]; Output: 2&lt;/li&gt;
 &lt;li&gt;Input: target = [6,4,8,1,3,2], arr = [4,7,6,2,3,8,6,1]: Output: 3&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;intuition-3&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Size is &lt;code&gt;10**5&lt;/code&gt;, the work need to O(nlogn) time. And the elements of &lt;code&gt;target&lt;/code&gt; are distinct, so we consider LIS.&lt;/p&gt;
 &lt;h3 id=&#34;solution-3&#34;&gt;Solution:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -233,6 +241,8 @@ Constraints:  1 &amp;lt;= intervals.length &amp;lt;= 10**5 intervals[i].length =
 &lt;li&gt;Input: strs = [&amp;ldquo;xc&amp;rdquo;, &amp;ldquo;yb&amp;rdquo;, &amp;ldquo;za&amp;rdquo;]; Output: 0&lt;/li&gt;
 &lt;li&gt;Input: strs = [&amp;ldquo;zyx&amp;rdquo;, &amp;ldquo;wvu&amp;rdquo;, &amp;ldquo;tsr&amp;rdquo;]; Output: 3&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;intuition-4&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;Greedy&lt;/p&gt;
 &lt;h3 id=&#34;solution-4&#34;&gt;Solution:&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
