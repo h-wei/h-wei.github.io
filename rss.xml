@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Wed, 09 Mar 2022 21:59:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 09 Mar 2022 22:08:46 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.ahsort.com/rss.xml" />
         
@@ -79,7 +79,7 @@
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;maximum-length-of-pair-chain-lc646-mediumhttpsleetcode-cncomproblemsmaximum-length-of-pair-chain&#34;&gt;【Maximum Length of Pair Chain, LC646, Medium](&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&#34;&gt;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&lt;/a&gt;)&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;maximum-length-of-pair-chain-lc646-mediumhttpsleetcode-cncomproblemsmaximum-length-of-pair-chain&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&#34;&gt;Maximum Length of Pair Chain, LC646, Medium&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;You are given an array of &lt;code&gt;n&lt;/code&gt; pairs where &lt;code&gt;pairs[i] = [left_i, right_i]&lt;/code&gt; and &lt;code&gt;left_i &amp;lt; right_i&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A pair &lt;code&gt;p2 = [c, d]&lt;/code&gt; follows a pair &lt;code&gt;p1 = [a, b]&lt;/code&gt; if &lt;code&gt;b &amp;lt; c&lt;/code&gt;. A chain of pairs can be formed in this fashion.&lt;/p&gt;
 &lt;p&gt;Return the length longest chain which can be formed.&lt;/p&gt;

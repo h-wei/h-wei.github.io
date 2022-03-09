@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">AH~ sort</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2022-03-09T21:59:09&#43;08:00</updated>
+    <updated>2022-03-09T22:08:46&#43;08:00</updated>
     <id>https://blog.ahsort.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.ahsort.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.ahsort.com/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">002</title>
             <link rel="alternate" type="text/html" href="https://blog.ahsort.com/algorithms/dc/002/" />
             <id>https://blog.ahsort.com/algorithms/dc/002/</id>
-            <updated>2022-03-09T21:59:01&#43;08:00</updated>
+            <updated>2022-03-09T22:08:43&#43;08:00</updated>
             <published>2022-03-09T20:38:18&#43;08:00</published>
             <author>
                     <name>Putao</name>
@@ -72,7 +72,7 @@ For example, if we have strs = [&amp;quot;abdef&amp;quot;, &amp;quot;uvwxyz&amp;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;maximum-length-of-pair-chain-lc646-mediumhttpsleetcode-cncomproblemsmaximum-length-of-pair-chain&#34;&gt;【Maximum Length of Pair Chain, LC646, Medium](&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&#34;&gt;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&lt;/a&gt;)&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;maximum-length-of-pair-chain-lc646-mediumhttpsleetcode-cncomproblemsmaximum-length-of-pair-chain&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-length-of-pair-chain/&#34;&gt;Maximum Length of Pair Chain, LC646, Medium&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;You are given an array of &lt;code&gt;n&lt;/code&gt; pairs where &lt;code&gt;pairs[i] = [left_i, right_i]&lt;/code&gt; and &lt;code&gt;left_i &amp;lt; right_i&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A pair &lt;code&gt;p2 = [c, d]&lt;/code&gt; follows a pair &lt;code&gt;p1 = [a, b]&lt;/code&gt; if &lt;code&gt;b &amp;lt; c&lt;/code&gt;. A chain of pairs can be formed in this fashion.&lt;/p&gt;
 &lt;p&gt;Return the length longest chain which can be formed.&lt;/p&gt;
