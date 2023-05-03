@@ -2,23 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.ahsort.com/algorithms/leetcode/01-two-pointers/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
-  </url><url>
     <loc>https://blog.ahsort.com/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/algorithms/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/leetcode/</loc>
-    <lastmod>2023-05-01T20:47:56+08:00</lastmod>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/tags/</loc>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/tags/two-pointers/</loc>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/two-sum-ii-input-array-is-sorted/</loc>
+    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/minimum-operations-to-reduce-x-to-zero/</loc>
+    <lastmod>2023-05-02T12:05:19+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/replace-the-substring-for-balanced-string/</loc>
+    <lastmod>2023-05-02T11:45:40+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/max-consecutive-ones-iii/</loc>
+    <lastmod>2023-05-02T11:14:21+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/subarray-product-less-than-k/</loc>
+    <lastmod>2023-05-02T10:51:48+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/minimum-size-subarray-sum/</loc>
+    <lastmod>2023-05-02T10:50:53+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/longest-substring-without-repeating-characters/</loc>
+    <lastmod>2023-05-02T10:49:39+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/sql/01-game-play-analysis/</loc>
     <lastmod>2022-04-14T06:43:49+08:00</lastmod>
@@ -30,9 +54,6 @@
     <lastmod>2022-04-14T06:43:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/sql/</loc>
-    <lastmod>2022-04-14T06:43:49+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.ahsort.com/tags/</loc>
     <lastmod>2022-04-14T06:43:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/linked-list/</loc>
@@ -78,9 +99,6 @@
     <lastmod>2021-11-24T12:24:58+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/11/24/trapping-rain-water/</loc>
-    <lastmod>2021-11-24T12:24:58+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.ahsort.com/tags/two-pointers/</loc>
     <lastmod>2021-11-24T12:24:58+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/counter/</loc>
@@ -219,16 +237,16 @@
     <lastmod>2021-07-17T08:39:50+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/07/16/4-sum/</loc>
-    <lastmod>2021-11-09T16:31:57+08:00</lastmod>
+    <lastmod>2023-05-01T22:48:22+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/07/16/minimum-falling-path-sum/</loc>
     <lastmod>2021-11-09T16:31:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/binary-search/</loc>
-    <lastmod>2021-11-21T16:30:21+08:00</lastmod>
+    <lastmod>2023-05-02T10:45:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/07/16/find-first-and-last-position-of-element-in-sorted-array/</loc>
-    <lastmod>2021-11-09T16:31:57+08:00</lastmod>
+    <lastmod>2023-05-02T10:45:57+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/system/system-design-intro/a-framework-for-system-design-interviews/</loc>
     <lastmod>2021-07-16T08:21:05+08:00</lastmod>
@@ -443,7 +461,7 @@
     <loc>https://blog.ahsort.com/algorithms/challenge/2021-january-week-2/</loc>
     <lastmod>2021-04-24T22:00:59+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/array/top-easy/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/array/top-easy/</loc>
     <lastmod>2021-04-17T23:22:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/04/02/ones-and-zeroes/</loc>
@@ -467,22 +485,22 @@
     <loc>https://blog.ahsort.com/tags/bit/</loc>
     <lastmod>2021-11-21T16:30:21+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/dynamic-programming/reach-target/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/dynamic-programming/reach-target/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/depth-first-search/island/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/depth-first-search/island/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/linked-list/remove-elements/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/linked-list/remove-elements/</loc>
     <lastmod>2021-06-08T09:12:55+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/binary-tree/binary-tree/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/binary-tree/binary-tree/</loc>
     <lastmod>2021-06-08T23:00:56+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/01/10/create-sorted-array-through-instructions/</loc>
     <lastmod>2021-11-21T16:30:21+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/breadth-first-search/breadth-first-search/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/breadth-first-search/breadth-first-search/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/deque/</loc>
@@ -500,10 +518,10 @@
     <loc>https://blog.ahsort.com/algorithms/2021/01/07/longest-substring-without-repeating-characters/</loc>
     <lastmod>2021-07-03T14:08:37+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/linked-list/linked-list/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/linked-list/linked-list/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/array/missing-number/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/array/missing-number/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/01/06/kth-missing-positive-number/</loc>
@@ -515,13 +533,13 @@
     <loc>https://blog.ahsort.com/algorithms/2021/01/04/merge-two-sorted-lists/</loc>
     <lastmod>2021-07-03T14:09:13+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/dynamic-programming/edit-distance/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/dynamic-programming/edit-distance/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/dynamic-programming/longest-increasing-subsequence/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/dynamic-programming/longest-increasing-subsequence/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/dynamic-programming/longest-common-subsequence/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/dynamic-programming/longest-common-subsequence/</loc>
     <lastmod>2021-02-21T13:32:18+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/contest/weekly-contest-222/</loc>
@@ -530,7 +548,7 @@
     <loc>https://blog.ahsort.com/algorithms/2021/01/03/beautiful-arrangement/</loc>
     <lastmod>2021-07-03T14:09:20+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/ds/trie/trie/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/trie/trie/</loc>
     <lastmod>2021-04-17T23:06:12+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/01/02/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/</loc>
