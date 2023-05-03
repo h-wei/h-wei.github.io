@@ -3,28 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.ahsort.com/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/algorithms/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/categories/leetcode/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/trapping-rain-water/</loc>
+    <lastmod>2023-05-03T21:03:14+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/two-pointers/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/container-with-most-water/</loc>
+    <lastmod>2023-05-03T20:36:53+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/3-sum/</loc>
+    <lastmod>2023-05-03T22:46:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/two-sum-ii-input-array-is-sorted/</loc>
-    <lastmod>2023-05-02T12:16:57+08:00</lastmod>
+    <lastmod>2023-05-03T22:53:11+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/minimum-operations-to-reduce-x-to-zero/</loc>
     <lastmod>2023-05-02T12:05:19+08:00</lastmod>
@@ -107,7 +116,7 @@
     <loc>https://blog.ahsort.com/algorithms/2021/11/24/reconstruct-original-digits-from-english/</loc>
     <lastmod>2021-11-24T09:54:30+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/2021/11/24/interval-list-intersections/</loc>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/interval-list-intersections/</loc>
     <lastmod>2021-11-24T09:54:46+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/line-sweep/</loc>
@@ -236,8 +245,8 @@
     <loc>https://blog.ahsort.com/categories/system-design/</loc>
     <lastmod>2021-07-17T08:39:50+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/2021/07/16/4-sum/</loc>
-    <lastmod>2023-05-01T22:48:22+08:00</lastmod>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/4-sum/</loc>
+    <lastmod>2023-05-03T14:20:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/algorithms/2021/07/16/minimum-falling-path-sum/</loc>
     <lastmod>2021-11-09T16:31:57+08:00</lastmod>
@@ -254,8 +263,8 @@
     <loc>https://blog.ahsort.com/algorithms/2021/07/15/maximum-element-after-decreasing-and-rearranging/</loc>
     <lastmod>2021-11-09T16:31:57+08:00</lastmod>
   </url><url>
-    <loc>https://blog.ahsort.com/algorithms/2021/07/15/valid_triangle_number/</loc>
-    <lastmod>2021-11-09T16:31:57+08:00</lastmod>
+    <loc>https://blog.ahsort.com/algorithms/fundations/two-pointers/valid_triangle_number/</loc>
+    <lastmod>2023-05-03T22:57:47+08:00</lastmod>
   </url><url>
     <loc>https://blog.ahsort.com/tags/math/</loc>
     <lastmod>2021-11-09T16:31:57+08:00</lastmod>
